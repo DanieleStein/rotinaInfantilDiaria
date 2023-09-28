@@ -2,6 +2,7 @@ package br.com.rotinainfantildiaria.android.login
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
@@ -9,8 +10,9 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -26,46 +28,69 @@ fun LoginScreen() {
 
   MyApplicationTheme() {
     Surface(
-      color = Color(0XFFFFEDED),
       modifier = Modifier.fillMaxSize(),
+      //color = Color(0xFFFFEDED)
+    ) {
 
-    )
-    {
       Column(
-        modifier = Modifier
-          .padding(16.dp),
+        modifier = Modifier.padding(16.dp),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
-
       ) {
 
         Image(
-          painter = painterResource(R.drawable.routine),
-          contentDescription = "Routine")
-
-        Text(
-          text = "Rotina Diária Infantil",
-          color = Color.White,
-          fontWeight = FontWeight.Bold,
-          fontSize = 32.sp)
+          painter = painterResource(R.drawable.routine2),
+          contentDescription = "Routine",
+          contentScale = ContentScale.FillWidth,
+          modifier = Modifier.width(300.dp)
+        )
 
         Spacer(modifier = Modifier.height(16.dp))
         OutlinedTextField(
           modifier = Modifier.fillMaxWidth(),
-          label = {Text(text = "Email")},
+          label = { Text(text = "Email") },
           value = email.value,
-          onValueChange = {email.value = it}
-          )
+          onValueChange = { email.value = it },
+          keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email)
+        )
 
         OutlinedTextField(
           modifier = Modifier.fillMaxWidth(),
-          label = {Text(text = "Senha")},
+          label = { Text(text = "Senha") },
           value = senha.value,
-          onValueChange = {senha.value = it})
+          onValueChange = { senha.value = it },
+          keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password)
+        )
 
-        Spacer(modifier = Modifier.height(5.dp))
-        Button(onClick = { /*TODO*/ }) {
-          Text(text = "Entrar")
+        Row(
+          verticalAlignment = Alignment.CenterVertically
+        ) {
+          TextButton(
+            onClick = { /*TODO*/ }) {
+            Text(
+              text = "CADASTRAR CONTA",
+              fontSize = 12.sp,
+              color = Color(0xFFF46799)
+            )
+          }
+
+          Spacer(modifier = Modifier.weight(1f))
+          TextButton(
+            onClick = { /*TODO*/ }) {
+            Text(
+              text = "ESQUECI SENHA",
+              fontSize = 12.sp,
+              color = Color(0xFFF46799)
+            )
+          }
+        }
+
+        Button(
+          onClick = { /*TODO*/ },
+          colors = ButtonDefaults.buttonColors(Color(0xFFFDE9AA)),
+          modifier = Modifier.fillMaxWidth()
+        ) {
+          Text(text = "Entrar", color = Color(0xFFF46799))
         }
       }
     }
