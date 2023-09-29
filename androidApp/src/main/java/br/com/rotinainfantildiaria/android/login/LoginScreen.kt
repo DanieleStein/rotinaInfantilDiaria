@@ -19,12 +19,14 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.rotinainfantildiaria.android.MyApplicationTheme
 import br.com.rotinainfantildiaria.android.R
+import br.com.rotinainfantildiaria.android.components.AlertDialogComponent
 
 @Composable
 fun LoginScreen() {
 
   val email = remember { mutableStateOf(TextFieldValue()) }
   val senha = remember { mutableStateOf(TextFieldValue()) }
+  val showDialog = remember { mutableStateOf(false) }
 
   MyApplicationTheme() {
     Surface(
@@ -86,12 +88,13 @@ fun LoginScreen() {
         }
 
         Button(
-          onClick = { /*TODO*/ },
+          onClick = { showDialog.value = true },
           colors = ButtonDefaults.buttonColors(Color(0xFFFDE9AA)),
           modifier = Modifier.fillMaxWidth()
         ) {
           Text(text = "Entrar", color = Color(0xFFF46799))
         }
+        AlertDialogComponent(showDialog = showDialog, email = email)
       }
     }
   }
