@@ -31,7 +31,7 @@ fun LoginScreen() {
   MyApplicationTheme() {
     Surface(
       modifier = Modifier.fillMaxSize(),
-      //color = Color(0xFFFFEDED)
+      color = Color(0xFFFFEDED)
     ) {
 
       Column(
