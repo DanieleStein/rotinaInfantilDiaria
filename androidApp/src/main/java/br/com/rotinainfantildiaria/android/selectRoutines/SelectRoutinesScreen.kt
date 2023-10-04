@@ -2,6 +2,7 @@ package br.com.rotinainfantildiaria.android.selectRoutines
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.material.Button
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -16,7 +17,7 @@ import androidx.compose.ui.unit.sp
 import br.com.rotinainfantildiaria.android.MyApplicationTheme
 
 @Composable
-fun SelectRoutinesScreen() {
+fun SelectRoutinesScreen(onBack: () -> Unit) {
 
   MyApplicationTheme() {
     Surface(
@@ -38,6 +39,12 @@ fun SelectRoutinesScreen() {
             textAlign = TextAlign.Center
           )
         }
+
+        item {
+          Button(onClick = onBack) {
+            Text(text = "Voltar")
+          }
+        }
       }
     }
   }
@@ -46,5 +53,5 @@ fun SelectRoutinesScreen() {
 @Preview
 @Composable
 fun SelectRoutineScreenPreview() {
-  SelectRoutinesScreen()
+  SelectRoutinesScreen {}
 }
