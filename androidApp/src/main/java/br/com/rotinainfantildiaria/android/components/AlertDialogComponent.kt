@@ -11,25 +11,18 @@ import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
 fun AlertDialogComponent(
-  showDialog: MutableState<Boolean>,
-  email: MutableState<TextFieldValue>
+  showDialog: Boolean,
+  mensagem: String,
+  onDismissRequest: () -> Unit
 ) {
-  if (showDialog.value) {
+  if (showDialog) {
     AlertDialog(
       contentColor = Color.White,
-      backgroundColor = Color.Black,
-      title = { Text(text = "Título") },
-      text = { Text(text = "Olá ${email.value.text}") },
-      onDismissRequest = { showDialog.value = false },
-      confirmButton = {
-        TextButton(
-          onClick = {
-            showDialog.value = false
-          })
-        {
-          Text(text = "Ok")
-        }
-      }
+      backgroundColor = Color(0xFFFDE9AA),
+      title = { Text(text = "Mensagem de Erro", color = Color.Red) },
+      text = { Text(text = "$mensagem", color = Color(0xFFF46799)) },
+      onDismissRequest = onDismissRequest,
+      confirmButton = { TextButton(onClick = onDismissRequest) { Text(text = "Ok", color = Color(0xFFF46799) )}}
     )
   }
 }
@@ -37,5 +30,6 @@ fun AlertDialogComponent(
 @Preview
 @Composable
 fun AlertDialogComponentPreview() {
+  AlertDialogComponent(showDialog = true, mensagem = "Test", {})
 }
 
