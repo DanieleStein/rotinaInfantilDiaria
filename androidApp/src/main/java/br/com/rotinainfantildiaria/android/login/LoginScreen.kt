@@ -25,7 +25,6 @@ import androidx.compose.ui.unit.sp
 import br.com.rotinainfantildiaria.android.MyApplicationTheme
 import br.com.rotinainfantildiaria.android.R
 import br.com.rotinainfantildiaria.android.components.AlertDialogComponent
-import br.com.rotinainfantildiaria.android.nav.Route
 import br.com.rotinainfantildiaria.model.Login
 
 @Composable
@@ -36,7 +35,7 @@ fun LoginScreen(onHomeNavigate: () -> Unit) {
   val senhaVisivel = remember { mutableStateOf(false) }
   val showDialog = remember { mutableStateOf(false) }
 
-  MyApplicationTheme() {
+  MyApplicationTheme {
     Surface(
       modifier = Modifier.fillMaxSize(),
       //color = Color(0xFFFFEDED)
@@ -128,7 +127,7 @@ fun LoginScreen(onHomeNavigate: () -> Unit) {
               senha = senha.value.text
             )
             if (loginUser.validator()) {
-              onHomeNavigate.invoke()
+              onHomeNavigate()
             } else {
               showDialog.value = true
             }
