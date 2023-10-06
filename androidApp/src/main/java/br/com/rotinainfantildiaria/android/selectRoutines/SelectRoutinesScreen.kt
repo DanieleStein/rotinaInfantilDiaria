@@ -50,14 +50,14 @@ fun SelectRoutinesScreen(onBack: () -> Unit) {
               image = {
                 Image(
                   modifier = Modifier.width(50.dp),
-                  painter = painterResource(id = R.drawable.banheiro1),
+                  painter = painterResource(id = R.drawable.banheiro3),
                   contentDescription = "banheiro",
                   alignment = Alignment.Center,
                   contentScale = ContentScale.FillWidth
                 )
               }
             )
-          Spacer(modifier = Modifier.height(5.dp))
+          Spacer(modifier = Modifier.height(8.dp))
         }
 
         item {
@@ -73,7 +73,7 @@ fun SelectRoutinesScreen(onBack: () -> Unit) {
               )
             }
           )
-          Spacer(modifier = Modifier.height(5.dp))
+          Spacer(modifier = Modifier.height(8.dp))
         }
 
         item {
@@ -89,7 +89,7 @@ fun SelectRoutinesScreen(onBack: () -> Unit) {
               )
             }
           )
-          Spacer(modifier = Modifier.height(5.dp))
+          Spacer(modifier = Modifier.height(8.dp))
         }
 
         item {
@@ -105,7 +105,7 @@ fun SelectRoutinesScreen(onBack: () -> Unit) {
               )
             }
           )
-          Spacer(modifier = Modifier.height(5.dp))
+          Spacer(modifier = Modifier.height(8.dp))
         }
 
         item {
@@ -121,7 +121,7 @@ fun SelectRoutinesScreen(onBack: () -> Unit) {
               )
             }
           )
-          Spacer(modifier = Modifier.height(5.dp))
+          Spacer(modifier = Modifier.height(8.dp))
         }
 
         item {
@@ -130,14 +130,14 @@ fun SelectRoutinesScreen(onBack: () -> Unit) {
             image = {
               Image(
                 modifier = Modifier.width(50.dp),
-                painter = painterResource(id = R.drawable.escovardentes),
+                painter = painterResource(id = R.drawable.escovardentes1),
                 contentDescription = "dentes",
                 alignment = Alignment.Center,
                 contentScale = ContentScale.FillWidth
               )
             }
           )
-          Spacer(modifier = Modifier.height(5.dp))
+          Spacer(modifier = Modifier.height(8.dp))
         }
 
         item {
@@ -153,8 +153,137 @@ fun SelectRoutinesScreen(onBack: () -> Unit) {
               )
             }
           )
-          Spacer(modifier = Modifier.height(5.dp))
+          Spacer(modifier = Modifier.height(8.dp))
         }
+
+        item {
+          CardRoutine(
+            routine = "Se arrumar",
+            image = {
+              Image(
+                modifier = Modifier.width(50.dp),
+                painter = painterResource(id = R.drawable.arrumar2),
+                contentDescription = "arrumar",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.FillWidth
+              )
+            }
+          )
+          Spacer(modifier = Modifier.height(8.dp))
+        }
+
+        item {
+          CardRoutine(
+            routine = "Ir dormir",
+            image = {
+              Image(
+                modifier = Modifier.width(50.dp),
+                painter = painterResource(id = R.drawable.dormir5),
+                contentDescription = "dormir",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.FillWidth
+              )
+            }
+          )
+          Spacer(modifier = Modifier.height(8.dp))
+        }
+
+        item {
+          CardRoutine(
+            routine = "Fazer uma oração",
+            image = {
+              Image(
+                modifier = Modifier.size(50.dp),
+                painter = painterResource(id = R.drawable.oracao1),
+                contentDescription = "oracao",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.FillWidth
+              )
+            }
+          )
+          Spacer(modifier = Modifier.height(8.dp))
+        }
+
+        item {
+          CardRoutine(
+            routine = "Ler uma história",
+            image = {
+              Image(
+                modifier = Modifier.size(50.dp),
+                painter = painterResource(id = R.drawable.lerlivro),
+                contentDescription = "historia",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.FillWidth
+              )
+            }
+          )
+          Spacer(modifier = Modifier.height(8.dp))
+        }
+
+        item {
+          CardRoutine(
+            routine = "Ecolinha de futebol",
+            image = {
+              Image(
+                modifier = Modifier.size(50.dp),
+                painter = painterResource(id = R.drawable.futebol),
+                contentDescription = "futebol",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.FillWidth
+              )
+            }
+          )
+          Spacer(modifier = Modifier.height(8.dp))
+        }
+
+        item {
+          CardRoutine(
+            routine = "Aula de balé",
+            image = {
+              Image(
+                modifier = Modifier.size(50.dp),
+                painter = painterResource(id = R.drawable.bale),
+                contentDescription = "bale",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.FillWidth
+              )
+            }
+          )
+          Spacer(modifier = Modifier.height(8.dp))
+        }
+
+        item {
+          CardRoutine(
+            routine = "Aula de música",
+            image = {
+              Image(
+                modifier = Modifier.size(50.dp),
+                painter = painterResource(id = R.drawable.musica1),
+                contentDescription = "musica",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.FillWidth
+              )
+            }
+          )
+          Spacer(modifier = Modifier.height(8.dp))
+        }
+
+        item {
+          CardRoutine(
+            routine = "Ir para a escola",
+            image = {
+              Image(
+                modifier = Modifier.size(50.dp),
+                painter = painterResource(id = R.drawable.escola1),
+                contentDescription = "escola",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.FillWidth
+              )
+            }
+          )
+          Spacer(modifier = Modifier.height(8.dp))
+        }
+
 
       }
     }

@@ -75,7 +75,7 @@ fun CardRoutinePreview() {
     image = {
       Image(
         modifier = Modifier.width(50.dp),
-        painter = painterResource(id = R.drawable.banheiro1),
+        painter = painterResource(id = R.drawable.banheiro3),
         contentDescription = "banheiro",
         alignment = Alignment.Center,
         contentScale = ContentScale.FillWidth
