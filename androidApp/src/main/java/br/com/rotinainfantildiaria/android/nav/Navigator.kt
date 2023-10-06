@@ -1,7 +1,6 @@
 package br.com.rotinainfantildiaria.android.nav
 
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -17,11 +16,11 @@ enum class Route {
 
 @Composable
 fun Navigator(
-  modifier: Modifier = Modifier,
   navHostController: NavHostController = rememberNavController(),
   initial: Route = Route.LOGIN
 ) {
-  NavHost(navController = navHostController,
+  NavHost(
+    navController = navHostController,
     startDestination = initial.name
   ) {
     composable(Route.LOGIN.name) {
