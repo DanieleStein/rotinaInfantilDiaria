@@ -66,7 +66,7 @@ fun SelectRoutinesScreen(onBack: () -> Unit) {
             image = {
               Image(
                 modifier = Modifier.width(50.dp),
-                painter = painterResource(id = R.drawable.banho1),
+                painter = painterResource(id = R.drawable.banho),
                 contentDescription = "banho",
                 alignment = Alignment.Center,
                 contentScale = ContentScale.FillWidth
@@ -82,7 +82,7 @@ fun SelectRoutinesScreen(onBack: () -> Unit) {
             image = {
               Image(
                 modifier = Modifier.width(50.dp),
-                painter = painterResource(id = R.drawable.brincar1),
+                painter = painterResource(id = R.drawable.brincar),
                 contentDescription = "brincar",
                 alignment = Alignment.Center,
                 contentScale = ContentScale.FillWidth
@@ -98,7 +98,7 @@ fun SelectRoutinesScreen(onBack: () -> Unit) {
             image = {
               Image(
                 modifier = Modifier.width(50.dp),
-                painter = painterResource(id = R.drawable.guardarbrinquedo1),
+                painter = painterResource(id = R.drawable.guardarbrinquedo),
                 contentDescription = "guardar",
                 alignment = Alignment.Center,
                 contentScale = ContentScale.FillWidth
@@ -114,7 +114,7 @@ fun SelectRoutinesScreen(onBack: () -> Unit) {
             image = {
               Image(
                 modifier = Modifier.width(50.dp),
-                painter = painterResource(id = R.drawable.tomarcafe1),
+                painter = painterResource(id = R.drawable.tomarcafe),
                 contentDescription = "cafe",
                 alignment = Alignment.Center,
                 contentScale = ContentScale.FillWidth
@@ -146,7 +146,7 @@ fun SelectRoutinesScreen(onBack: () -> Unit) {
             image = {
               Image(
                 modifier = Modifier.width(50.dp),
-                painter = painterResource(id = R.drawable.refeicaofamilia1),
+                painter = painterResource(id = R.drawable.refeicaofamilia),
                 contentDescription = "refeicao",
                 alignment = Alignment.Center,
                 contentScale = ContentScale.FillWidth
@@ -276,6 +276,54 @@ fun SelectRoutinesScreen(onBack: () -> Unit) {
                 modifier = Modifier.size(50.dp),
                 painter = painterResource(id = R.drawable.escola1),
                 contentDescription = "escola",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.FillWidth
+              )
+            }
+          )
+          Spacer(modifier = Modifier.height(8.dp))
+        }
+
+        item {
+          CardRoutine(
+            routine = "Cuidar/brincar do seu bichinho",
+            image = {
+              Image(
+                modifier = Modifier.size(50.dp),
+                painter = painterResource(id = R.drawable.bichinhos),
+                contentDescription = "bichinho",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.FillWidth
+              )
+            }
+          )
+          Spacer(modifier = Modifier.height(8.dp))
+        }
+
+        item {
+          CardRoutine(
+            routine = "Almoçar",
+            image = {
+              Image(
+                modifier = Modifier.size(50.dp),
+                painter = painterResource(id = R.drawable.almocar),
+                contentDescription = "almocar",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.FillWidth
+              )
+            }
+          )
+          Spacer(modifier = Modifier.height(8.dp))
+        }
+
+        item {
+          CardRoutine(
+            routine = "Jantar",
+            image = {
+              Image(
+                modifier = Modifier.size(50.dp),
+                painter = painterResource(id = R.drawable.jantar),
+                contentDescription = "jantar",
                 alignment = Alignment.Center,
                 contentScale = ContentScale.FillWidth
               )
