@@ -5,6 +5,9 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.material.OutlinedTextField
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -19,17 +22,22 @@ import androidx.compose.ui.unit.sp
 import br.com.rotinainfantildiaria.android.MyApplicationTheme
 import br.com.rotinainfantildiaria.android.components.CardRoutine
 import br.com.rotinainfantildiaria.android.R
+import br.com.rotinainfantildiaria.android.components.BottomAppBarHome
+import br.com.rotinainfantildiaria.android.components.TopBarHome
 
 @Composable
 fun SelectRoutinesScreen(onBack: () -> Unit) {
   MyApplicationTheme {
-    Surface(
-      modifier = Modifier.fillMaxSize(),
-      color = Color.White
+    Scaffold(
+      topBar = { TopBarHome(title = "Routine") },
+      bottomBar = { BottomAppBarHome(title = "Confirmar")}
+
     ) {
 
       LazyColumn(
-        modifier = Modifier.padding(16.dp),
+        modifier = Modifier
+          .padding(16.dp)
+          .padding(it)
       ) {
 
         item {
@@ -38,7 +46,8 @@ fun SelectRoutinesScreen(onBack: () -> Unit) {
             fontWeight = FontWeight.Bold,
             fontFamily = FontFamily.Cursive,
             fontSize = 35.sp,
-            color = Color(0xFFF46799),
+            //color = Color(0xFFF46799),
+            color = Color.Black,
             textAlign = TextAlign.Center
           )
           Spacer(modifier = Modifier.height(16.dp))
@@ -286,7 +295,7 @@ fun SelectRoutinesScreen(onBack: () -> Unit) {
 
         item {
           CardRoutine(
-            routine = "Cuidar/brincar do seu bichinho",
+            routine = "Brincar/cuidar do seu bichinho",
             image = {
               Image(
                 modifier = Modifier.size(50.dp),
