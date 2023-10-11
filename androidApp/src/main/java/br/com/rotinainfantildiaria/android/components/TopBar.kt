@@ -54,11 +54,11 @@ fun TopBarHome(title: String) {
 }
 
 @Composable
-fun BottomAppBarHome(title: String) {
+fun BottomAppBarHome(title: String, onClick: () -> Unit) {
   BottomAppBar(
     backgroundColor = Color(0xFFFDE9AA)
   ) {
-    TextButton(onClick = { /*TODO*/ }) {
+    TextButton(onClick = onClick) {
       Text(
         text = title,
         color = Color(0xFFF46799),
@@ -85,6 +85,6 @@ fun TopBarPerfilPreview() {
 @Preview
 @Composable
 fun BottomAppBarHomePreview() {
-  BottomAppBarHome("Confirmar")
+  BottomAppBarHome("Confirmar", onClick = {})
 }
 
