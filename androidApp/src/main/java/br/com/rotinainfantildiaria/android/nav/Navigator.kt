@@ -5,12 +5,13 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import br.com.rotinainfantildiaria.android.listRoutines.ListRoutinesScreen
 import br.com.rotinainfantildiaria.android.login.LoginScreen
 import br.com.rotinainfantildiaria.android.selectRoutines.SelectRoutinesScreen
 
 
 enum class Route {
-  LOGIN, HOME
+  LOGIN, HOME, LIST
 }
 
 
@@ -28,7 +29,11 @@ fun Navigator(
     }
 
     composable(Route.HOME.name) {
-      SelectRoutinesScreen { navHostController.popBackStack() }
+      SelectRoutinesScreen { navHostController.navigate(Route.LIST.name) }
+    }
+
+    composable(Route.LIST.name) {
+      ListRoutinesScreen { navHostController.popBackStack()}
     }
 
   }
