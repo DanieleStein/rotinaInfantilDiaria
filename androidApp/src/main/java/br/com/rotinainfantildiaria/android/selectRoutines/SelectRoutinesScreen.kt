@@ -5,9 +5,6 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.material.OutlinedTextField
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -26,12 +23,11 @@ import br.com.rotinainfantildiaria.android.components.BottomAppBarHome
 import br.com.rotinainfantildiaria.android.components.TopBarHome
 
 @Composable
-fun SelectRoutinesScreen(onBack: () -> Unit) {
+fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
   MyApplicationTheme {
     Scaffold(
       topBar = { TopBarHome(title = "Routine") },
-      bottomBar = { BottomAppBarHome(title = "Confirmar")}
-
+      bottomBar = { BottomAppBarHome(title = "Confirmar", onClick = onListNavigate)}
     ) {
 
       LazyColumn(
