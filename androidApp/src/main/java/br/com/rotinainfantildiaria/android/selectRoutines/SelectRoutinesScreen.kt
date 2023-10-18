@@ -27,7 +27,8 @@ fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
   MyApplicationTheme {
     Scaffold(
       topBar = { TopBarHome(title = "Routine") },
-      bottomBar = { BottomAppBarHome(title = "Confirmar", onClick = onListNavigate)}
+      bottomBar = {
+        BottomAppBarHome(title = "Confirmar", onClick = onListNavigate)}
     ) {
 
       LazyColumn(
