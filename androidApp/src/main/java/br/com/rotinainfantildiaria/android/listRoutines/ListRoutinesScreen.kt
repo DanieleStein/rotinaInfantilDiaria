@@ -11,10 +11,10 @@ import br.com.rotinainfantildiaria.android.MyApplicationTheme
 import br.com.rotinainfantildiaria.android.components.BottomAppBarHome
 
 @Composable
-fun ListRoutinesScreen(onBack: () -> Unit) {
+fun ListRoutinesScreen(onSelectNavigate: () -> Unit) {
   MyApplicationTheme {
     Scaffold(
-      bottomBar = { BottomAppBarHome(title = "Voltar", onClick = onBack) }
+      bottomBar = { BottomAppBarHome(title = "Adicionar tarefa", onClick = onSelectNavigate) }
     ) {
       LazyColumn(
         modifier = Modifier
@@ -30,6 +30,6 @@ fun ListRoutinesScreen(onBack: () -> Unit) {
 @Preview
 @Composable
 fun ListRoutinesScreenPreview() {
-  ListRoutinesScreen(onBack = {})
+  ListRoutinesScreen(onSelectNavigate = {})
 }
 
