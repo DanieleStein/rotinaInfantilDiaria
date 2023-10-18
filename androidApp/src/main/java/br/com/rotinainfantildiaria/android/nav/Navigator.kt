@@ -11,7 +11,7 @@ import br.com.rotinainfantildiaria.android.selectRoutines.SelectRoutinesScreen
 
 
 enum class Route {
-  LOGIN, HOME, LIST
+  LOGIN, SELECT, LIST
 }
 
 
@@ -25,16 +25,18 @@ fun Navigator(
     startDestination = initial.name
   ) {
     composable(Route.LOGIN.name) {
-      LoginScreen { navHostController.navigate(Route.HOME.name) }
-    }
-
-    composable(Route.HOME.name) {
-      SelectRoutinesScreen { navHostController.navigate(Route.LIST.name) }
+      LoginScreen { navHostController.navigate(Route.LIST.name) }
     }
 
     composable(Route.LIST.name) {
-      ListRoutinesScreen { navHostController.popBackStack()}
+      ListRoutinesScreen { navHostController.navigate(Route.SELECT.name)}
     }
+
+    composable(Route.SELECT.name) {
+      SelectRoutinesScreen { navHostController.navigate(Route.LIST.name) }
+    }
+
+
 
   }
 
