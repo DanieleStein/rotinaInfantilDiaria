@@ -12,6 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
@@ -20,20 +21,22 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.rotinainfantildiaria.android.R
+import br.com.rotinainfantildiaria.android.ui.theme.pinkWriting
+import br.com.rotinainfantildiaria.android.ui.theme.yellow
 
 @Composable
 fun TopBarHome(title: String) {
   TopAppBar(
-    backgroundColor = Color(0xFFFDE9AA),
+    backgroundColor = yellow,
     navigationIcon = {
       IconButton(onClick = { /*TODO*/ }) {
-        Icon(Icons.Filled.Menu, "Menu", tint = Color(0xFFF46799))
+        Icon(Icons.Filled.Menu, "Menu", tint = pinkWriting)
       }
     },
     title = {
       Text(
         text = title,
-        color = Color(0xFFF46799),
+        color = pinkWriting,
         fontFamily = FontFamily.Cursive,
         fontWeight = FontWeight.Bold,
         fontSize = 30.sp
@@ -46,7 +49,7 @@ fun TopBarHome(title: String) {
           contentDescription = "profile",
           contentScale = ContentScale.FillWidth,
           modifier = Modifier.size(30.dp),
-          colorFilter = ColorFilter.tint(color = Color(0xFFF46799))
+          colorFilter = ColorFilter.tint(color = pinkWriting)
         )
       }
     }
@@ -56,12 +59,12 @@ fun TopBarHome(title: String) {
 @Composable
 fun BottomAppBarHome(title: String, onClick: () -> Unit) {
   BottomAppBar(
-    backgroundColor = Color(0xFFFDE9AA)
+    backgroundColor = yellow
   ) {
     TextButton(onClick = onClick) {
       Text(
         text = title,
-        color = Color(0xFFF46799),
+        color = pinkWriting,
         fontFamily = FontFamily.Cursive,
         fontWeight = FontWeight.Bold,
         fontSize = 30.sp,

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <color name="blue">#FF0051EF</color>
-  <color name="pink">#F8F6F6</color>
+  <color name="black">#000000</color>
+  <color name="whith">#FFFFFF</color>
+  <color name="yellow">#FDE9AA</color>
+  <color name="pinkWriting">#F46799</color>
+  <color name="pinkBackground">#FFEDED</color>
 
 </resources>
