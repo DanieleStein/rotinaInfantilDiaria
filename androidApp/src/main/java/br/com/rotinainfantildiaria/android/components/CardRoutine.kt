@@ -22,6 +22,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.rotinainfantildiaria.android.R
+import br.com.rotinainfantildiaria.android.ui.theme.pinkBackground
+import br.com.rotinainfantildiaria.android.ui.theme.pinkWriting
 
 @Composable
 fun CardRoutine(routine: String, image: @Composable () -> Unit) {
@@ -31,7 +33,7 @@ fun CardRoutine(routine: String, image: @Composable () -> Unit) {
     Row(
       verticalAlignment = Alignment.CenterVertically,
       modifier = Modifier
-        .background(Color(0xFFFFEDED))
+        .background((pinkBackground))
         .fillMaxWidth()
         .height(56.dp)
         //.toggleable(
@@ -59,7 +61,7 @@ fun CardRoutine(routine: String, image: @Composable () -> Unit) {
       Checkbox(
         checked = checkedState.value,
         onCheckedChange = {checkedState.value = it},
-        colors = CheckboxDefaults.colors(Color(0xFFF46799))
+        colors = CheckboxDefaults.colors(pinkWriting)
       )
     }
   }
