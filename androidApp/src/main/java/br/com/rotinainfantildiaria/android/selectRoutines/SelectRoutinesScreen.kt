@@ -19,16 +19,15 @@ import androidx.compose.ui.unit.sp
 import br.com.rotinainfantildiaria.android.MyApplicationTheme
 import br.com.rotinainfantildiaria.android.components.CardRoutine
 import br.com.rotinainfantildiaria.android.R
-import br.com.rotinainfantildiaria.android.components.BottomAppBarHome
-import br.com.rotinainfantildiaria.android.components.TopBarHome
+import br.com.rotinainfantildiaria.android.components.BottomAppBarSelect
+import br.com.rotinainfantildiaria.android.components.TopBarSelect
 
 @Composable
 fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
   MyApplicationTheme {
     Scaffold(
-      topBar = { TopBarHome(title = "Routine") },
-      bottomBar = {
-        BottomAppBarHome(title = "Confirmar", onClick = onListNavigate)}
+      topBar = { TopBarSelect(title = "Routine") },
+      bottomBar = { BottomAppBarSelect(title = "Adicionar", onClick = onListNavigate) }
     ) {
 
       LazyColumn(
