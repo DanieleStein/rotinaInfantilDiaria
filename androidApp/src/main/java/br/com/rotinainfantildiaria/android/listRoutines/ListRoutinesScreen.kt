@@ -8,13 +8,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.rotinainfantildiaria.android.MyApplicationTheme
-import br.com.rotinainfantildiaria.android.components.BottomAppBarHome
+import br.com.rotinainfantildiaria.android.components.FloatingButton
+import br.com.rotinainfantildiaria.android.components.TopBarList
 
 @Composable
 fun ListRoutinesScreen(onSelectNavigate: () -> Unit) {
   MyApplicationTheme {
     Scaffold(
-      bottomBar = { BottomAppBarHome(title = "Adicionar tarefa", onClick = onSelectNavigate) }
+      floatingActionButton = { FloatingButton(onClick = onSelectNavigate) },
+      topBar = { TopBarList(title = "Routine") }
     ) {
       LazyColumn(
         modifier = Modifier
