@@ -1,6 +1,7 @@
 package br.com.rotinainfantildiaria.android.components
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.*
@@ -9,11 +10,11 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -25,27 +26,29 @@ import br.com.rotinainfantildiaria.android.ui.theme.pinkWriting
 import br.com.rotinainfantildiaria.android.ui.theme.yellow
 
 @Composable
-fun TopBarHome(title: String) {
+fun TopBarSelect(title: String) {
   TopAppBar(
     backgroundColor = yellow,
-    navigationIcon = {
+    /*navigationIcon = {
       IconButton(onClick = { /*TODO*/ }) {
         Icon(Icons.Filled.Menu, "Menu", tint = pinkWriting)
       }
-    },
+    }*/
     title = {
       Text(
         text = title,
         color = pinkWriting,
         fontFamily = FontFamily.Cursive,
         fontWeight = FontWeight.Bold,
-        fontSize = 30.sp
+        fontSize = 30.sp,
+        modifier = Modifier.fillMaxWidth(),
+        textAlign = TextAlign.Center
       )
     },
     actions = {
       IconButton(onClick = { /*TODO*/ }) {
         Image(
-          painter = painterResource(R.drawable.ic_profile),
+          imageVector = ImageVector.vectorResource(R.drawable.ic_profile),
           contentDescription = "profile",
           contentScale = ContentScale.FillWidth,
           modifier = Modifier.size(30.dp),
@@ -57,7 +60,7 @@ fun TopBarHome(title: String) {
 }
 
 @Composable
-fun BottomAppBarHome(title: String, onClick: () -> Unit) {
+fun BottomAppBarSelect(title: String, onClick: () -> Unit) {
   BottomAppBar(
     backgroundColor = yellow
   ) {
@@ -68,26 +71,68 @@ fun BottomAppBarHome(title: String, onClick: () -> Unit) {
         fontFamily = FontFamily.Cursive,
         fontWeight = FontWeight.Bold,
         fontSize = 30.sp,
-        textAlign = TextAlign.End,
-        modifier = Modifier.fillMaxWidth()
+        modifier = Modifier.fillMaxWidth(),
+        textAlign = TextAlign.End
+
       )
     }
   }
 }
 
+@Composable
+fun TopBarList(title: String) {
+  TopAppBar(
+    backgroundColor = yellow
+  ) {
+    Text(
+      text = title,
+      color = (pinkWriting),
+      fontSize = 30.sp,
+      fontWeight = FontWeight.Bold,
+      fontFamily = FontFamily.Cursive,
+      modifier = Modifier.fillMaxWidth(),
+      textAlign = TextAlign.Center
+    )
+  }
+}
 
-
+@Composable
+fun FloatingButton(onClick: () -> Unit) {
+  FloatingActionButton(
+    onClick = onClick,
+    backgroundColor = yellow,
+  ) {
+    Image(
+      imageVector = ImageVector.vectorResource(R.drawable.ic_add),
+      contentDescription = "adicionar",
+      modifier = Modifier.size(40.dp),
+      colorFilter = ColorFilter.tint(pinkWriting)
+    )
+  }
+}
 
 
 @Preview
 @Composable
-fun TopBarPerfilPreview() {
-  TopBarHome("Routine")
+fun TopBarSelectPreview() {
+  TopBarSelect("Routine")
 }
 
 @Preview
 @Composable
-fun BottomAppBarHomePreview() {
-  BottomAppBarHome("Confirmar", onClick = {})
+fun BottomAppBarSelectPreview() {
+  BottomAppBarSelect("Confirmar", onClick = {})
+}
+
+@Preview
+@Composable
+fun TopBarListPreview() {
+  TopBarList(title = "Routine")
+}
+
+@Preview
+@Composable
+fun FloatingButtonPreview() {
+  FloatingButton {}
 }
 
