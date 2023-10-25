@@ -8,7 +8,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.rotinainfantildiaria.android.MyApplicationTheme
-import br.com.rotinainfantildiaria.android.components.CardRoutineList
 import br.com.rotinainfantildiaria.android.components.FloatingButton
 import br.com.rotinainfantildiaria.android.components.TopBarList
 
@@ -24,12 +23,10 @@ fun ListRoutinesScreen(onSelectNavigate: () -> Unit) {
           .padding(16.dp)
           .padding(it)
       ) {
-        item { 
-          CardRoutineList(routine = "Ir ao banheiro") {
+        item {
 
-          }
+
         }
-
       }
     }
   }
