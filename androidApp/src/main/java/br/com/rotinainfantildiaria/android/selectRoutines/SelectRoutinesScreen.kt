@@ -1,14 +1,10 @@
 package br.com.rotinainfantildiaria.android.selectRoutines
 
-import android.content.Intent
-import android.telecom.Call.Details
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -34,15 +30,13 @@ fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
       bottomBar = { BottomAppBarSelect(title = "Adicionar", onClick = onListNavigate) }
     ) {
 
-      val itemsList = remember { mutableStateOf("value") }
-
       LazyColumn(
         modifier = Modifier
           .padding(16.dp)
           .padding(it)
       ) {
 
-        item(itemsList) {
+        item {
           Text(
             text = "Divirta-se, monte a rotina do seu pequeno!",
             fontWeight = FontWeight.Bold,
@@ -55,7 +49,7 @@ fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
           Spacer(modifier = Modifier.height(16.dp))
         }
 
-        item(itemsList) {
+        item {
             CardRoutine(
               routine = "Ir ao banheiro",
               image = {
@@ -71,7 +65,7 @@ fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
           Spacer(modifier = Modifier.height(8.dp))
         }
 
-        item(itemsList) {
+        item {
           CardRoutine(
             routine = "Tomar banho",
             image = {
@@ -87,7 +81,7 @@ fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
           Spacer(modifier = Modifier.height(8.dp))
         }
 
-        item(itemsList) {
+        item {
           CardRoutine(
             routine = "Brincar",
             image = {
@@ -103,7 +97,7 @@ fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
           Spacer(modifier = Modifier.height(8.dp))
         }
 
-        item(itemsList) {
+        item {
           CardRoutine(
             routine = "Guardar os brinquedos",
             image = {
@@ -119,7 +113,7 @@ fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
           Spacer(modifier = Modifier.height(8.dp))
         }
 
-        item(itemsList) {
+        item {
           CardRoutine(
             routine = "Tomar café da manhã",
             image = {
@@ -135,7 +129,7 @@ fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
           Spacer(modifier = Modifier.height(8.dp))
         }
 
-        item(itemsList) {
+        item {
           CardRoutine(
             routine = "Escovar os dentes",
             image = {
@@ -151,7 +145,7 @@ fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
           Spacer(modifier = Modifier.height(8.dp))
         }
 
-        item(itemsList) {
+        item {
           CardRoutine(
             routine = "Refeição em família",
             image = {
@@ -167,7 +161,7 @@ fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
           Spacer(modifier = Modifier.height(8.dp))
         }
 
-        item(itemsList) {
+        item {
           CardRoutine(
             routine = "Se arrumar",
             image = {
@@ -183,7 +177,7 @@ fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
           Spacer(modifier = Modifier.height(8.dp))
         }
 
-        item(itemsList) {
+        item {
           CardRoutine(
             routine = "Ir dormir",
             image = {
@@ -199,7 +193,7 @@ fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
           Spacer(modifier = Modifier.height(8.dp))
         }
 
-        item(itemsList) {
+        item {
           CardRoutine(
             routine = "Fazer uma oração",
             image = {
@@ -215,7 +209,7 @@ fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
           Spacer(modifier = Modifier.height(8.dp))
         }
 
-        item(itemsList) {
+        item {
           CardRoutine(
             routine = "Ler uma história",
             image = {
@@ -231,7 +225,7 @@ fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
           Spacer(modifier = Modifier.height(8.dp))
         }
 
-        item(itemsList) {
+        item {
           CardRoutine(
             routine = "Ecolinha de futebol",
             image = {
@@ -247,7 +241,7 @@ fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
           Spacer(modifier = Modifier.height(8.dp))
         }
 
-        item(itemsList) {
+        item {
           CardRoutine(
             routine = "Aula de balé",
             image = {
@@ -263,7 +257,7 @@ fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
           Spacer(modifier = Modifier.height(8.dp))
         }
 
-        item(itemsList) {
+        item {
           CardRoutine(
             routine = "Aula de música",
             image = {
@@ -279,7 +273,7 @@ fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
           Spacer(modifier = Modifier.height(8.dp))
         }
 
-        item(itemsList) {
+        item {
           CardRoutine(
             routine = "Ir para a escola",
             image = {
@@ -295,7 +289,7 @@ fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
           Spacer(modifier = Modifier.height(8.dp))
         }
 
-        item(itemsList) {
+        item {
           CardRoutine(
             routine = "Brincar/cuidar do seu bichinho",
             image = {
@@ -311,7 +305,7 @@ fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
           Spacer(modifier = Modifier.height(8.dp))
         }
 
-        item(itemsList) {
+        item {
           CardRoutine(
             routine = "Almoçar",
             image = {
@@ -327,7 +321,7 @@ fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
           Spacer(modifier = Modifier.height(8.dp))
         }
 
-        item(itemsList) {
+        item {
           CardRoutine(
             routine = "Jantar",
             image = {
