@@ -23,10 +23,7 @@ fun ListRoutinesScreen(onSelectNavigate: () -> Unit) {
           .padding(16.dp)
           .padding(it)
       ) {
-        item {
 
-
-        }
       }
     }
   }
