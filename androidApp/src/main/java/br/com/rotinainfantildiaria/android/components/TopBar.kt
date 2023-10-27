@@ -92,7 +92,7 @@ fun TopBarList(title: String) {
 }
 
 @Composable
-fun FloatingButton(onClick: () -> Unit) {
+fun FloatingButtonList(onClick: () -> Unit) {
   FloatingActionButton(
     onClick = onClick,
     backgroundColor = yellow,
@@ -128,6 +128,6 @@ fun TopBarListPreview() {
 @Preview
 @Composable
 fun FloatingButtonPreview() {
-  FloatingButton {}
+  FloatingButtonList {}
 }
 
