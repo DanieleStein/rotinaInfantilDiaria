@@ -17,9 +17,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.rotinainfantildiaria.android.MyApplicationTheme
-import br.com.rotinainfantildiaria.android.components.CardRoutine
 import br.com.rotinainfantildiaria.android.R
 import br.com.rotinainfantildiaria.android.components.BottomAppBarSelect
+import br.com.rotinainfantildiaria.android.components.CardRoutineSelect
 import br.com.rotinainfantildiaria.android.components.TopBarSelect
 
 @Composable
@@ -42,7 +42,6 @@ fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
             fontWeight = FontWeight.Bold,
             fontFamily = FontFamily.Cursive,
             fontSize = 35.sp,
-            //color = Color(0xFFF46799),
             color = Color.Black,
             textAlign = TextAlign.Center
           )
@@ -50,7 +49,7 @@ fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
         }
 
         item {
-            CardRoutine(
+            CardRoutineSelect(
               routine = "Ir ao banheiro",
               image = {
                 Image(
@@ -66,7 +65,7 @@ fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
         }
 
         item {
-          CardRoutine(
+          CardRoutineSelect(
             routine = "Tomar banho",
             image = {
               Image(
@@ -82,7 +81,7 @@ fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
         }
 
         item {
-          CardRoutine(
+          CardRoutineSelect(
             routine = "Brincar",
             image = {
               Image(
@@ -98,7 +97,7 @@ fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
         }
 
         item {
-          CardRoutine(
+          CardRoutineSelect(
             routine = "Guardar os brinquedos",
             image = {
               Image(
@@ -114,7 +113,7 @@ fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
         }
 
         item {
-          CardRoutine(
+          CardRoutineSelect(
             routine = "Tomar café da manhã",
             image = {
               Image(
@@ -130,7 +129,7 @@ fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
         }
 
         item {
-          CardRoutine(
+          CardRoutineSelect(
             routine = "Escovar os dentes",
             image = {
               Image(
@@ -146,7 +145,7 @@ fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
         }
 
         item {
-          CardRoutine(
+          CardRoutineSelect(
             routine = "Refeição em família",
             image = {
               Image(
@@ -162,7 +161,7 @@ fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
         }
 
         item {
-          CardRoutine(
+          CardRoutineSelect(
             routine = "Se arrumar",
             image = {
               Image(
@@ -178,7 +177,7 @@ fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
         }
 
         item {
-          CardRoutine(
+          CardRoutineSelect(
             routine = "Ir dormir",
             image = {
               Image(
@@ -194,7 +193,7 @@ fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
         }
 
         item {
-          CardRoutine(
+          CardRoutineSelect(
             routine = "Fazer uma oração",
             image = {
               Image(
@@ -210,7 +209,7 @@ fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
         }
 
         item {
-          CardRoutine(
+          CardRoutineSelect(
             routine = "Ler uma história",
             image = {
               Image(
@@ -226,7 +225,7 @@ fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
         }
 
         item {
-          CardRoutine(
+          CardRoutineSelect(
             routine = "Ecolinha de futebol",
             image = {
               Image(
@@ -242,7 +241,7 @@ fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
         }
 
         item {
-          CardRoutine(
+          CardRoutineSelect(
             routine = "Aula de balé",
             image = {
               Image(
@@ -258,7 +257,7 @@ fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
         }
 
         item {
-          CardRoutine(
+          CardRoutineSelect(
             routine = "Aula de música",
             image = {
               Image(
@@ -274,7 +273,7 @@ fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
         }
 
         item {
-          CardRoutine(
+          CardRoutineSelect(
             routine = "Ir para a escola",
             image = {
               Image(
@@ -290,7 +289,7 @@ fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
         }
 
         item {
-          CardRoutine(
+          CardRoutineSelect(
             routine = "Brincar/cuidar do seu bichinho",
             image = {
               Image(
@@ -306,7 +305,7 @@ fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
         }
 
         item {
-          CardRoutine(
+          CardRoutineSelect(
             routine = "Almoçar",
             image = {
               Image(
@@ -322,7 +321,7 @@ fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
         }
 
         item {
-          CardRoutine(
+          CardRoutineSelect(
             routine = "Jantar",
             image = {
               Image(
