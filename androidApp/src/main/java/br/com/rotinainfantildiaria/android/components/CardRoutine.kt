@@ -6,12 +6,10 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material.Card
 import androidx.compose.material.Checkbox
 import androidx.compose.material.CheckboxDefaults
-import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Text
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
@@ -27,9 +25,9 @@ import br.com.rotinainfantildiaria.android.ui.theme.pinkBackground
 import br.com.rotinainfantildiaria.android.ui.theme.pinkWriting
 
 @Composable
-fun CardRoutine(routine: String, image: @Composable () -> Unit) {
+fun CardRoutineSelect(routine: String, image: @Composable () -> Unit) {
   Card {
-    val checkedState = rememberSaveable { mutableStateOf(false) }
+    val checkedState = remember { mutableStateOf(false) }
 
     Row(
       verticalAlignment = Alignment.CenterVertically,
@@ -69,7 +67,6 @@ fun CardRoutine(routine: String, image: @Composable () -> Unit) {
 }
 
 
-@OptIn(ExperimentalMaterialApi::class, ExperimentalMaterial3Api::class)
 @Composable
 fun CardRoutineList(routine: String, image: @Composable () -> Unit) {
   Card {
@@ -102,8 +99,8 @@ fun CardRoutineList(routine: String, image: @Composable () -> Unit) {
 
 @Preview
 @Composable
-fun CardRoutinePreview() {
-  CardRoutine(
+fun CardRoutineSelectPreview() {
+  CardRoutineSelect(
     routine = "Ir ao banheiro",
     image = {
       Image(
