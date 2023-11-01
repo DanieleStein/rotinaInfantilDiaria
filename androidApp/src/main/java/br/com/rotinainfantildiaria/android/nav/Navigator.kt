@@ -7,6 +7,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import br.com.rotinainfantildiaria.android.listRoutines.ListRoutinesScreen
 import br.com.rotinainfantildiaria.android.login.LoginScreen
+import br.com.rotinainfantildiaria.android.selectGender.SelectGenderScreen
 import br.com.rotinainfantildiaria.android.selectRoutines.SelectRoutinesScreen
 
 
@@ -25,7 +26,11 @@ fun Navigator(
     startDestination = initial.name
   ) {
     composable(Route.LOGIN.name) {
-      LoginScreen { navHostController.navigate(Route.LIST.name) }
+      LoginScreen { navHostController.navigate(Route.GENDER.name) }
+    }
+
+    composable(Route.GENDER.name) {
+      SelectGenderScreen { navHostController.navigate(Route.LIST.name) }
     }
 
     composable(Route.LIST.name) {
@@ -36,9 +41,7 @@ fun Navigator(
       SelectRoutinesScreen { navHostController.navigate(Route.LIST.name) }
     }
 
-    composable(Route.GENDER.name) {
-      GenderScreen { navHostController.navigate(Route.LIST.name) }
-    }
+
 
 
 
