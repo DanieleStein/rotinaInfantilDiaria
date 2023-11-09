@@ -8,7 +8,7 @@ import androidx.navigation.compose.rememberNavController
 import br.com.rotinainfantildiaria.android.listRoutines.ListRoutinesScreen
 import br.com.rotinainfantildiaria.android.login.LoginScreen
 import br.com.rotinainfantildiaria.android.selectGender.SelectGenderScreen
-import br.com.rotinainfantildiaria.android.selectRoutines.SelectRoutinesScreen
+import br.com.rotinainfantildiaria.android.selectRoutines.SelectRoutinesGirlScreen
 
 
 enum class Route {
@@ -38,7 +38,7 @@ fun Navigator(
     }
 
     composable(Route.SELECT.name) {
-      SelectRoutinesScreen { navHostController.navigate(Route.LIST.name) }
+      SelectRoutinesGirlScreen { navHostController.navigate(Route.LIST.name) }
     }
 
 
