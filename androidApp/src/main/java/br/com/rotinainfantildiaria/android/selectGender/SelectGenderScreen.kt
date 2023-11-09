@@ -16,14 +16,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import br.com.rotinainfantildiaria.android.MyApplicationTheme
 import br.com.rotinainfantildiaria.android.ui.theme.blueSelected
-import br.com.rotinainfantildiaria.android.ui.theme.pinkDisabled
 import br.com.rotinainfantildiaria.android.ui.theme.pinkSelected
 
 @Composable
 fun SelectGenderScreen(selectedGenderNavigate: () -> Unit) {
   MyApplicationTheme {
-    Scaffold(
-    ) {
+    Scaffold {
       Column(
         modifier = Modifier
           .padding(it)
