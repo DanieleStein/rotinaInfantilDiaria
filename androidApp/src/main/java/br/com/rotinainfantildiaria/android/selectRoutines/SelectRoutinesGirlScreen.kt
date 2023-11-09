@@ -23,7 +23,7 @@ import br.com.rotinainfantildiaria.android.components.CardRoutineSelect
 import br.com.rotinainfantildiaria.android.components.TopBarSelect
 
 @Composable
-fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
+fun SelectRoutinesGirlScreen(onListNavigate: () -> Unit) {
   MyApplicationTheme {
     Scaffold(
       topBar = { TopBarSelect(title = "Routine") },
@@ -343,5 +343,5 @@ fun SelectRoutinesScreen(onListNavigate: () -> Unit) {
 @Preview
 @Composable
 fun SelectRoutineScreenPreview() {
-  SelectRoutinesScreen {}
+  SelectRoutinesGirlScreen {}
 }
