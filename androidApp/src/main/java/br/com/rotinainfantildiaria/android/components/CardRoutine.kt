@@ -21,6 +21,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.rotinainfantildiaria.android.R
+import br.com.rotinainfantildiaria.android.ui.theme.blueList
 import br.com.rotinainfantildiaria.android.ui.theme.pinkBackground
 import br.com.rotinainfantildiaria.android.ui.theme.pinkWriting
 
@@ -96,6 +97,48 @@ fun CardRoutineList(routine: String, image: @Composable () -> Unit) {
   }
 }
 
+@Composable
+fun CardRoutineSelect2(routine: String, image: @Composable () -> Unit) {
+  Card {
+    val checkedState = remember { mutableStateOf(false) }
+
+    Row(
+      verticalAlignment = Alignment.CenterVertically,
+      modifier = Modifier
+        .background((blueList))
+        .fillMaxWidth()
+        .height(56.dp)
+        //.toggleable(
+        //value = checkedState,
+        //onValueChange = { onStateChange(!checkedState) },
+        //role = Role.Checkbox
+        //)
+        .padding(horizontal = 3.dp, vertical = 3.dp)
+        .padding(end = 5.dp)
+    ) {
+      Column(
+        verticalArrangement = Arrangement.Center,
+      ) {
+        image()
+      }
+      Spacer(modifier = Modifier.width(15.dp))
+      Text(
+        text = routine,
+        fontSize = 20.sp,
+        fontFamily = FontFamily.Cursive,
+        fontWeight = FontWeight.Bold,
+        textAlign = TextAlign.Center
+      )
+      Spacer(modifier = Modifier.weight(1f))
+      Checkbox(
+        checked = checkedState.value,
+        onCheckedChange = { checkedState.value = it },
+        colors = CheckboxDefaults.colors(pinkWriting)
+      )
+    }
+  }
+}
+
 
 @Preview
 @Composable
@@ -118,6 +161,23 @@ fun CardRoutineSelectPreview() {
 @Composable
 fun CardRoutineListPreview() {
   CardRoutineList(
+    routine = "Ir ao banheiro",
+    image = {
+      Image(
+        modifier = Modifier.width(50.dp),
+        painter = painterResource(id = R.drawable.banheiro3),
+        contentDescription = "banheiro",
+        alignment = Alignment.Center,
+        contentScale = ContentScale.FillWidth
+      )
+    }
+  )
+}
+
+@Preview
+@Composable
+fun CardRoutineSelect2Preview() {
+  CardRoutineSelect2(
     routine = "Ir ao banheiro",
     image = {
       Image(

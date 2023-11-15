@@ -8,15 +8,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.rotinainfantildiaria.android.MyApplicationTheme
-import br.com.rotinainfantildiaria.android.components.FloatingButtonList
-import br.com.rotinainfantildiaria.android.components.TopBarList
+import br.com.rotinainfantildiaria.android.components.FloatingButtonGirl
+import br.com.rotinainfantildiaria.android.components.TopBarGirl
 
 @Composable
-fun ListRoutinesScreen(onSelectNavigate: () -> Unit) {
+fun ListRoutinesGirlScreen(onSelectNavigate: () -> Unit) {
   MyApplicationTheme {
     Scaffold(
-      floatingActionButton = { FloatingButtonList(onClick = onSelectNavigate) },
-      topBar = { TopBarList(title = "Routine") }
+      floatingActionButton = { FloatingButtonGirl(onClick = onSelectNavigate) },
+      topBar = { TopBarGirl(title = "Routine") }
     ) {
       LazyColumn(
         modifier = Modifier
@@ -32,6 +32,6 @@ fun ListRoutinesScreen(onSelectNavigate: () -> Unit) {
 @Preview
 @Composable
 fun ListRoutinesScreenPreview() {
-  ListRoutinesScreen(onSelectNavigate = {})
+  ListRoutinesGirlScreen(onSelectNavigate = {})
 }
 
