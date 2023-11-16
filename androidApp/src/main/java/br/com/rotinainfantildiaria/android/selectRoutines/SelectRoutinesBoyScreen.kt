@@ -68,6 +68,22 @@ fun SelectRoutinesBoyScreen() {
           Spacer(modifier = Modifier.height(8.dp))
         }
 
+        item {
+          CardRoutineSelect2(
+            routine = "Tomar banho",
+            image = {
+              Image(
+                modifier = Modifier.width(50.dp),
+                painter = painterResource(id = R.drawable.banho),
+                contentDescription = "banho",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.FillWidth
+              )
+            }
+          )
+          Spacer(modifier = Modifier.height(8.dp))
+        }
+
       }
     }
   }
