@@ -22,7 +22,6 @@ import androidx.compose.ui.unit.sp
 import br.com.rotinainfantildiaria.android.MyApplicationTheme
 import br.com.rotinainfantildiaria.android.R
 import br.com.rotinainfantildiaria.android.components.BottomAppBarBoy
-import br.com.rotinainfantildiaria.android.components.CardRoutineSelect
 import br.com.rotinainfantildiaria.android.components.CardRoutineSelect2
 import br.com.rotinainfantildiaria.android.components.TopBarBoy
 
@@ -76,6 +75,38 @@ fun SelectRoutinesBoyScreen() {
                 modifier = Modifier.width(50.dp),
                 painter = painterResource(id = R.drawable.banho),
                 contentDescription = "banho",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.FillWidth
+              )
+            }
+          )
+          Spacer(modifier = Modifier.height(8.dp))
+        }
+
+        item {
+          CardRoutineSelect2(
+            routine = "Brincar",
+            image = {
+              Image(
+                modifier = Modifier.width(50.dp),
+                painter = painterResource(id = R.drawable.brincar),
+                contentDescription = "brincar",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.FillWidth
+              )
+            }
+          )
+          Spacer(modifier = Modifier.height(8.dp))
+        }
+
+        item {
+          CardRoutineSelect2(
+            routine = "Guardar os brinquedos",
+            image = {
+              Image(
+                modifier = Modifier.width(50.dp),
+                painter = painterResource(id = R.drawable.guardarbrinquedo),
+                contentDescription = "guardar",
                 alignment = Alignment.Center,
                 contentScale = ContentScale.FillWidth
               )
