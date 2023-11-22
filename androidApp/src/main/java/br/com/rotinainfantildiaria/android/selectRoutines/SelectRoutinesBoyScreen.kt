@@ -22,6 +22,7 @@ import androidx.compose.ui.unit.sp
 import br.com.rotinainfantildiaria.android.MyApplicationTheme
 import br.com.rotinainfantildiaria.android.R
 import br.com.rotinainfantildiaria.android.components.BottomAppBarBoy
+import br.com.rotinainfantildiaria.android.components.CardRoutineSelect
 import br.com.rotinainfantildiaria.android.components.CardRoutineSelect2
 import br.com.rotinainfantildiaria.android.components.TopBarBoy
 
@@ -114,6 +115,39 @@ fun SelectRoutinesBoyScreen() {
           )
           Spacer(modifier = Modifier.height(8.dp))
         }
+
+        item {
+          CardRoutineSelect2(
+            routine = "Tomar café da manhã",
+            image = {
+              Image(
+                modifier = Modifier.width(50.dp),
+                painter = painterResource(id = R.drawable.tomarcafe),
+                contentDescription = "cafe",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.FillWidth
+              )
+            }
+          )
+          Spacer(modifier = Modifier.height(8.dp))
+        }
+
+        item {
+          CardRoutineSelect2(
+            routine = "Escovar os dentes",
+            image = {
+              Image(
+                modifier = Modifier.width(50.dp),
+                painter = painterResource(id = R.drawable.escovardentes1),
+                contentDescription = "dentes",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.FillWidth
+              )
+            }
+          )
+          Spacer(modifier = Modifier.height(8.dp))
+        }
+
 
       }
     }
