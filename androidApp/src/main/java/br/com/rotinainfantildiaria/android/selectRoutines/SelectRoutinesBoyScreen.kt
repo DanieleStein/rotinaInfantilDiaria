@@ -84,6 +84,71 @@ fun SelectRoutinesBoyScreen() {
           Spacer(modifier = Modifier.height(8.dp))
         }
 
+        item {
+          CardRoutineSelect2(
+            routine = "Brincar",
+            image = {
+              Image(
+                modifier = Modifier.width(50.dp),
+                painter = painterResource(id = R.drawable.brincar),
+                contentDescription = "brincar",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.FillWidth
+              )
+            }
+          )
+          Spacer(modifier = Modifier.height(8.dp))
+        }
+
+        item {
+          CardRoutineSelect2(
+            routine = "Guardar os brinquedos",
+            image = {
+              Image(
+                modifier = Modifier.width(50.dp),
+                painter = painterResource(id = R.drawable.guardarbrinquedo),
+                contentDescription = "guardar",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.FillWidth
+              )
+            }
+          )
+          Spacer(modifier = Modifier.height(8.dp))
+        }
+
+        item {
+          CardRoutineSelect2(
+            routine = "Tomar café da manhã",
+            image = {
+              Image(
+                modifier = Modifier.width(50.dp),
+                painter = painterResource(id = R.drawable.tomarcafe),
+                contentDescription = "cafe",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.FillWidth
+              )
+            }
+          )
+          Spacer(modifier = Modifier.height(8.dp))
+        }
+
+        item {
+          CardRoutineSelect2(
+            routine = "Escovar os dentes",
+            image = {
+              Image(
+                modifier = Modifier.width(50.dp),
+                painter = painterResource(id = R.drawable.escovardentes1),
+                contentDescription = "dentes",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.FillWidth
+              )
+            }
+          )
+          Spacer(modifier = Modifier.height(8.dp))
+        }
+
+
       }
     }
   }
