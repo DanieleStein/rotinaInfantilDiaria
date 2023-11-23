@@ -22,16 +22,16 @@ import androidx.compose.ui.unit.sp
 import br.com.rotinainfantildiaria.android.MyApplicationTheme
 import br.com.rotinainfantildiaria.android.R
 import br.com.rotinainfantildiaria.android.components.BottomAppBarBoy
-import br.com.rotinainfantildiaria.android.components.CardRoutineSelect
 import br.com.rotinainfantildiaria.android.components.CardRoutineSelect2
 import br.com.rotinainfantildiaria.android.components.TopBarBoy
+import br.com.rotinainfantildiaria.android.nav.Route
 
 @Composable
-fun SelectRoutinesBoyScreen() {
+fun SelectRoutinesBoyScreen(function: () -> Unit) {
   MyApplicationTheme {
     Scaffold(
       topBar = { TopBarBoy(title = "Routine") },
-      bottomBar = { BottomAppBarBoy(title = "Adicionar", onClick = {}) }
+      bottomBar = { BottomAppBarBoy(title = "Adicionar", onClick = function) }
     ) {
 
       LazyColumn(
@@ -157,5 +157,5 @@ fun SelectRoutinesBoyScreen() {
 @Preview
 @Composable
 fun SelectRoyinesBoyScreenPreview() {
-  SelectRoutinesBoyScreen()
+  SelectRoutinesBoyScreen { }
 }
