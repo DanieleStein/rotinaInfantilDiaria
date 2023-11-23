@@ -5,14 +5,16 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import br.com.rotinainfantildiaria.android.listRoutines.ListRoutinesScreen
+import br.com.rotinainfantildiaria.android.listRoutines.ListRoutinesBoyScreen
+import br.com.rotinainfantildiaria.android.listRoutines.ListRoutinesGirlScreen
 import br.com.rotinainfantildiaria.android.login.LoginScreen
 import br.com.rotinainfantildiaria.android.selectGender.SelectGenderScreen
+import br.com.rotinainfantildiaria.android.selectRoutines.SelectRoutinesBoyScreen
 import br.com.rotinainfantildiaria.android.selectRoutines.SelectRoutinesGirlScreen
 
 
 enum class Route {
-  LOGIN, SELECT, LIST, GENDER
+  LOGIN, SELECT, LIST, GENDER, LISTB, SELECTB, GENDERB
 }
 
 
@@ -34,11 +36,23 @@ fun Navigator(
     }
 
     composable(Route.LIST.name) {
-      ListRoutinesScreen { navHostController.navigate(Route.SELECT.name)}
+      ListRoutinesGirlScreen { navHostController.navigate(Route.SELECT.name)}
     }
 
     composable(Route.SELECT.name) {
       SelectRoutinesGirlScreen { navHostController.navigate(Route.LIST.name) }
+    }
+
+    composable(Route.GENDERB.name) {
+      SelectGenderScreen { navHostController.navigate(Route.LISTB.name)}
+    }
+
+    composable(Route.LISTB.name) {
+      ListRoutinesBoyScreen { navHostController.navigate(Route.SELECTB.name) }
+    }
+
+    composable(Route.SELECTB.name) {
+      SelectRoutinesBoyScreen { navHostController.navigate(Route.LISTB.name) }
     }
 
 
