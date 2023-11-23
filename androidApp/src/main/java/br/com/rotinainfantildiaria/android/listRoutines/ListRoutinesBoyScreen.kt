@@ -10,12 +10,13 @@ import androidx.compose.ui.unit.dp
 import br.com.rotinainfantildiaria.android.MyApplicationTheme
 import br.com.rotinainfantildiaria.android.components.FloatingButtonBoy
 import br.com.rotinainfantildiaria.android.components.TopBarBoy
+import br.com.rotinainfantildiaria.android.nav.Route
 
 @Composable
-fun ListRoutinesBoyScreen() {
+fun ListRoutinesBoyScreen(function: () -> Unit) {
  MyApplicationTheme {
    Scaffold(
-     floatingActionButton = { FloatingButtonBoy {}},
+     floatingActionButton = { FloatingButtonBoy (onClick = function)},
      topBar = { TopBarBoy(title = "Routine")}
    ) {
      LazyColumn(
@@ -32,5 +33,5 @@ fun ListRoutinesBoyScreen() {
 @Preview
 @Composable
 fun ListRoutinesBoyScreenPreview() {
-  ListRoutinesBoyScreen()
+  ListRoutinesBoyScreen {}
 }
