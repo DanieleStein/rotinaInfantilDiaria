@@ -38,7 +38,6 @@ fun SelectGenderScreen(selectedGenderNavigate: () -> Unit) {
             colors = ButtonDefaults.buttonColors(
               backgroundColor = Color.Transparent,
               disabledBackgroundColor = Color.White
-
             )
           ) {
             Text(
@@ -54,7 +53,12 @@ fun SelectGenderScreen(selectedGenderNavigate: () -> Unit) {
         Row(
           verticalAlignment = Alignment.CenterVertically
         ) {
-          TextButton(onClick = { /*TODO*/ }
+          TextButton(
+            onClick = selectedGenderNavigate,
+            colors = ButtonDefaults.buttonColors(
+              backgroundColor = Color.Transparent,
+              disabledBackgroundColor = Color.White
+            )
           ) {
             Text(
               text = "Menino",
