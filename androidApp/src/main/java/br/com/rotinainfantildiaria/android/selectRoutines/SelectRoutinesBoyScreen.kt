@@ -22,6 +22,7 @@ import androidx.compose.ui.unit.sp
 import br.com.rotinainfantildiaria.android.MyApplicationTheme
 import br.com.rotinainfantildiaria.android.R
 import br.com.rotinainfantildiaria.android.components.BottomAppBarBoy
+import br.com.rotinainfantildiaria.android.components.CardRoutineSelect
 import br.com.rotinainfantildiaria.android.components.CardRoutineSelect2
 import br.com.rotinainfantildiaria.android.components.TopBarBoy
 import br.com.rotinainfantildiaria.android.nav.Route
@@ -140,6 +141,38 @@ fun SelectRoutinesBoyScreen(function: () -> Unit) {
                 modifier = Modifier.width(50.dp),
                 painter = painterResource(id = R.drawable.escovardentes1),
                 contentDescription = "dentes",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.FillWidth
+              )
+            }
+          )
+          Spacer(modifier = Modifier.height(8.dp))
+        }
+
+        item {
+          CardRoutineSelect2(
+            routine = "Refeição em família",
+            image = {
+              Image(
+                modifier = Modifier.width(50.dp),
+                painter = painterResource(id = R.drawable.refeicaofamilia),
+                contentDescription = "refeicao",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.FillWidth
+              )
+            }
+          )
+          Spacer(modifier = Modifier.height(8.dp))
+        }
+
+        item {
+          CardRoutineSelect2(
+            routine = "Se arrumar",
+            image = {
+              Image(
+                modifier = Modifier.width(50.dp),
+                painter = painterResource(id = R.drawable.arrumar2),
+                contentDescription = "arrumar",
                 alignment = Alignment.Center,
                 contentScale = ContentScale.FillWidth
               )
