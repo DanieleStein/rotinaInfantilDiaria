@@ -4,6 +4,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.*
@@ -25,7 +26,6 @@ import br.com.rotinainfantildiaria.android.components.BottomAppBarBoy
 import br.com.rotinainfantildiaria.android.components.CardRoutineSelect
 import br.com.rotinainfantildiaria.android.components.CardRoutineSelect2
 import br.com.rotinainfantildiaria.android.components.TopBarBoy
-import br.com.rotinainfantildiaria.android.nav.Route
 
 @Composable
 fun SelectRoutinesBoyScreen(function: () -> Unit) {
@@ -173,6 +173,166 @@ fun SelectRoutinesBoyScreen(function: () -> Unit) {
                 modifier = Modifier.width(50.dp),
                 painter = painterResource(id = R.drawable.arrumar2),
                 contentDescription = "arrumar",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.FillWidth
+              )
+            }
+          )
+          Spacer(modifier = Modifier.height(8.dp))
+        }
+
+        item {
+          CardRoutineSelect2(
+            routine = "Ir dormir",
+            image = {
+              Image(
+                modifier = Modifier.width(50.dp),
+                painter = painterResource(id = R.drawable.dormir5),
+                contentDescription = "dormir",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.FillWidth
+              )
+            }
+          )
+          Spacer(modifier = Modifier.height(8.dp))
+        }
+
+        item {
+          CardRoutineSelect2(
+            routine = "Fazer uma oração",
+            image = {
+              Image(
+                modifier = Modifier.size(50.dp),
+                painter = painterResource(id = R.drawable.oracao1),
+                contentDescription = "oracao",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.FillWidth
+              )
+            }
+          )
+          Spacer(modifier = Modifier.height(8.dp))
+        }
+
+        item {
+          CardRoutineSelect2(
+            routine = "Ler uma história",
+            image = {
+              Image(
+                modifier = Modifier.size(50.dp),
+                painter = painterResource(id = R.drawable.lerlivro),
+                contentDescription = "historia",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.FillWidth
+              )
+            }
+          )
+          Spacer(modifier = Modifier.height(8.dp))
+        }
+
+        item {
+          CardRoutineSelect2(
+            routine = "Ecolinha de futebol",
+            image = {
+              Image(
+                modifier = Modifier.size(50.dp),
+                painter = painterResource(id = R.drawable.futebol),
+                contentDescription = "futebol",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.FillWidth
+              )
+            }
+          )
+          Spacer(modifier = Modifier.height(8.dp))
+        }
+
+        item {
+          CardRoutineSelect(
+            routine = "Aula de balé",
+            image = {
+              Image(
+                modifier = Modifier.size(50.dp),
+                painter = painterResource(id = R.drawable.bale),
+                contentDescription = "bale",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.FillWidth
+              )
+            }
+          )
+          Spacer(modifier = Modifier.height(8.dp))
+        }
+
+        item {
+          CardRoutineSelect(
+            routine = "Aula de música",
+            image = {
+              Image(
+                modifier = Modifier.size(50.dp),
+                painter = painterResource(id = R.drawable.musica1),
+                contentDescription = "musica",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.FillWidth
+              )
+            }
+          )
+          Spacer(modifier = Modifier.height(8.dp))
+        }
+
+        item {
+          CardRoutineSelect(
+            routine = "Ir para a escola",
+            image = {
+              Image(
+                modifier = Modifier.size(50.dp),
+                painter = painterResource(id = R.drawable.escola1),
+                contentDescription = "escola",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.FillWidth
+              )
+            }
+          )
+          Spacer(modifier = Modifier.height(8.dp))
+        }
+
+        item {
+          CardRoutineSelect(
+            routine = "Brincar/cuidar do seu bichinho",
+            image = {
+              Image(
+                modifier = Modifier.size(50.dp),
+                painter = painterResource(id = R.drawable.bichinhos),
+                contentDescription = "bichinho",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.FillWidth
+              )
+            }
+          )
+          Spacer(modifier = Modifier.height(8.dp))
+        }
+
+        item {
+          CardRoutineSelect(
+            routine = "Almoçar",
+            image = {
+              Image(
+                modifier = Modifier.size(50.dp),
+                painter = painterResource(id = R.drawable.almocar),
+                contentDescription = "almocar",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.FillWidth
+              )
+            }
+          )
+          Spacer(modifier = Modifier.height(8.dp))
+        }
+
+        item {
+          CardRoutineSelect(
+            routine = "Jantar",
+            image = {
+              Image(
+                modifier = Modifier.size(50.dp),
+                painter = painterResource(id = R.drawable.jantar),
+                contentDescription = "jantar",
                 alignment = Alignment.Center,
                 contentScale = ContentScale.FillWidth
               )
