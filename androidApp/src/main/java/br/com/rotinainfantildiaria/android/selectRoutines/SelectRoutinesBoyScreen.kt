@@ -198,7 +198,7 @@ fun SelectRoutinesBoyScreen(function: () -> Unit) {
         }
 
         item {
-          CardRoutineSelect(
+          CardRoutineSelect2(
             routine = "Fazer uma oração",
             image = {
               Image(
