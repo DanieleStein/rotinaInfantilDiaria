@@ -293,54 +293,6 @@ fun SelectRoutinesBoyScreen(function: () -> Unit) {
           Spacer(modifier = Modifier.height(8.dp))
         }
 
-        item {
-          CardRoutineSelect(
-            routine = "Brincar/cuidar do seu bichinho",
-            image = {
-              Image(
-                modifier = Modifier.size(50.dp),
-                painter = painterResource(id = R.drawable.bichinhos),
-                contentDescription = "bichinho",
-                alignment = Alignment.Center,
-                contentScale = ContentScale.FillWidth
-              )
-            }
-          )
-          Spacer(modifier = Modifier.height(8.dp))
-        }
-
-        item {
-          CardRoutineSelect(
-            routine = "Almoçar",
-            image = {
-              Image(
-                modifier = Modifier.size(50.dp),
-                painter = painterResource(id = R.drawable.almocar),
-                contentDescription = "almocar",
-                alignment = Alignment.Center,
-                contentScale = ContentScale.FillWidth
-              )
-            }
-          )
-          Spacer(modifier = Modifier.height(8.dp))
-        }
-
-        item {
-          CardRoutineSelect(
-            routine = "Jantar",
-            image = {
-              Image(
-                modifier = Modifier.size(50.dp),
-                painter = painterResource(id = R.drawable.jantar),
-                contentDescription = "jantar",
-                alignment = Alignment.Center,
-                contentScale = ContentScale.FillWidth
-              )
-            }
-          )
-          Spacer(modifier = Modifier.height(8.dp))
-        }
-
 
       }
     }
