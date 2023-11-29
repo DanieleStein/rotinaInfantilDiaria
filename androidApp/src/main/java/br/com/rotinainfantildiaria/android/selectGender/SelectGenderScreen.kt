@@ -54,7 +54,7 @@ fun SelectGenderScreen(selectedGenderNavigate: () -> Unit) {
           verticalAlignment = Alignment.CenterVertically
         ) {
           TextButton(
-            onClick = {},
+            onClick = selectedGenderNavigate,
             colors = ButtonDefaults.buttonColors(
               backgroundColor = Color.Transparent,
               disabledBackgroundColor = Color.White
