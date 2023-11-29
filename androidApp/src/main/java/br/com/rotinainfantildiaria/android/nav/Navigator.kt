@@ -51,10 +51,6 @@ fun Navigator(
       ListRoutinesBoyScreen { navHostController.navigate(Route.SELECTB.name) }
     }
 
-    composable(Route.SELECTB.name) {
-      SelectRoutinesBoyScreen { navHostController.navigate(Route.LISTB.name) }
-    }
-
 
 
 
