@@ -23,7 +23,6 @@ import androidx.compose.ui.unit.sp
 import br.com.rotinainfantildiaria.android.MyApplicationTheme
 import br.com.rotinainfantildiaria.android.R
 import br.com.rotinainfantildiaria.android.components.BottomAppBarBoy
-import br.com.rotinainfantildiaria.android.components.CardRoutineSelect
 import br.com.rotinainfantildiaria.android.components.CardRoutineSelect2
 import br.com.rotinainfantildiaria.android.components.TopBarBoy
 
@@ -246,7 +245,7 @@ fun SelectRoutinesBoyScreen(function: () -> Unit) {
         }
 
         item {
-          CardRoutineSelect(
+          CardRoutineSelect2(
             routine = "Aula de balé",
             image = {
               Image(
@@ -262,7 +261,7 @@ fun SelectRoutinesBoyScreen(function: () -> Unit) {
         }
 
         item {
-          CardRoutineSelect(
+          CardRoutineSelect2(
             routine = "Aula de música",
             image = {
               Image(
@@ -278,7 +277,7 @@ fun SelectRoutinesBoyScreen(function: () -> Unit) {
         }
 
         item {
-          CardRoutineSelect(
+          CardRoutineSelect2(
             routine = "Ir para a escola",
             image = {
               Image(
@@ -293,6 +292,53 @@ fun SelectRoutinesBoyScreen(function: () -> Unit) {
           Spacer(modifier = Modifier.height(8.dp))
         }
 
+        item {
+          CardRoutineSelect2(
+            routine = "Brincar/cuidar do seu bichinho",
+            image = {
+              Image(
+                modifier = Modifier.size(50.dp),
+                painter = painterResource(id = R.drawable.bichinhos),
+                contentDescription = "bichinho",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.FillWidth
+              )
+            }
+          )
+          Spacer(modifier = Modifier.height(8.dp))
+        }
+
+        item {
+          CardRoutineSelect2(
+            routine = "Almoçar",
+            image = {
+              Image(
+                modifier = Modifier.size(50.dp),
+                painter = painterResource(id = R.drawable.almocar),
+                contentDescription = "almocar",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.FillWidth
+              )
+            }
+          )
+          Spacer(modifier = Modifier.height(8.dp))
+        }
+
+        item {
+          CardRoutineSelect2(
+            routine = "Jantar",
+            image = {
+              Image(
+                modifier = Modifier.size(50.dp),
+                painter = painterResource(id = R.drawable.jantar),
+                contentDescription = "jantar",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.FillWidth
+              )
+            }
+          )
+          Spacer(modifier = Modifier.height(8.dp))
+        }
 
       }
     }
