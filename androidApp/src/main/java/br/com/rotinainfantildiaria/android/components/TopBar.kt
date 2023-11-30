@@ -20,12 +20,13 @@ import androidx.compose.ui.unit.sp
 import br.com.rotinainfantildiaria.android.R
 import br.com.rotinainfantildiaria.android.ui.theme.green
 import br.com.rotinainfantildiaria.android.ui.theme.pinkWriting
+import br.com.rotinainfantildiaria.android.ui.theme.violet
 import br.com.rotinainfantildiaria.android.ui.theme.yellow
 
 @Composable
 fun TopBarGirl(title: String) {
   TopAppBar(
-    backgroundColor = yellow,
+    backgroundColor = violet,
     /*navigationIcon = {
       IconButton(onClick = { /*TODO*/ }) {
         Icon(Icons.Filled.Menu, "Menu", tint = pinkWriting)
@@ -34,7 +35,7 @@ fun TopBarGirl(title: String) {
     title = {
       Text(
         text = title,
-        color = pinkWriting,
+        color = Color.White,
         fontFamily = FontFamily.Cursive,
         fontWeight = FontWeight.Bold,
         fontSize = 30.sp,
@@ -49,7 +50,7 @@ fun TopBarGirl(title: String) {
           contentDescription = "profile",
           contentScale = ContentScale.FillWidth,
           modifier = Modifier.size(30.dp),
-          colorFilter = ColorFilter.tint(color = pinkWriting)
+          colorFilter = ColorFilter.tint(color = Color.White)
         )
       }
     }
@@ -59,12 +60,12 @@ fun TopBarGirl(title: String) {
 @Composable
 fun BottomAppBarGirl(title: String, onClick: () -> Unit) {
   BottomAppBar(
-    backgroundColor = yellow
+    backgroundColor = violet
   ) {
     TextButton(onClick = onClick) {
       Text(
         text = title,
-        color = pinkWriting,
+        color = Color.White,
         fontFamily = FontFamily.Cursive,
         fontWeight = FontWeight.Bold,
         fontSize = 30.sp,
@@ -80,13 +81,13 @@ fun BottomAppBarGirl(title: String, onClick: () -> Unit) {
 fun FloatingButtonGirl(onClick: () -> Unit) {
   FloatingActionButton(
     onClick = onClick,
-    backgroundColor = yellow,
+    backgroundColor = violet,
   ) {
     Image(
       imageVector = ImageVector.vectorResource(R.drawable.ic_add),
       contentDescription = "adicionar",
       modifier = Modifier.size(40.dp),
-      colorFilter = ColorFilter.tint(pinkWriting)
+      colorFilter = ColorFilter.tint(Color.White)
     )
   }
 }
@@ -94,7 +95,7 @@ fun FloatingButtonGirl(onClick: () -> Unit) {
 @Composable
 fun TopBarBoy (title: String) {
   TopAppBar(
-    backgroundColor = green,
+    backgroundColor = violet,
     /*navigationIcon = {
       IconButton(onClick = { /*TODO*/ }) {
         Icon(Icons.Filled.Menu, "Menu", tint = pinkWriting)
@@ -129,7 +130,7 @@ fun TopBarBoy (title: String) {
 fun FloatingButtonBoy(onClick: () -> Unit) {
   FloatingActionButton(
     onClick = onClick,
-    backgroundColor = green,
+    backgroundColor = violet,
   ) {
     Image(
       imageVector = ImageVector.vectorResource(R.drawable.ic_add),
@@ -143,7 +144,7 @@ fun FloatingButtonBoy(onClick: () -> Unit) {
 @Composable
 fun BottomAppBarBoy(title: String, onClick: () -> Unit) {
   BottomAppBar(
-    backgroundColor = green
+    backgroundColor = violet
   ) {
     TextButton(onClick = onClick) {
       Text(
