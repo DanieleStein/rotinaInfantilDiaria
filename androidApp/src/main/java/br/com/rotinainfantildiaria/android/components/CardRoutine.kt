@@ -21,7 +21,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.rotinainfantildiaria.android.R
+import br.com.rotinainfantildiaria.android.ui.theme.blue
+import br.com.rotinainfantildiaria.android.ui.theme.blueDisabled
 import br.com.rotinainfantildiaria.android.ui.theme.blueList
+import br.com.rotinainfantildiaria.android.ui.theme.pink
 import br.com.rotinainfantildiaria.android.ui.theme.pinkBackground
 import br.com.rotinainfantildiaria.android.ui.theme.pinkWriting
 
@@ -33,7 +36,7 @@ fun CardRoutineSelect(routine: String, image: @Composable () -> Unit) {
     Row(
       verticalAlignment = Alignment.CenterVertically,
       modifier = Modifier
-        .background((pinkBackground))
+        .background((pink))
         .fillMaxWidth()
         .height(56.dp)
         //.toggleable(
@@ -105,7 +108,7 @@ fun CardRoutineSelect2(routine: String, image: @Composable () -> Unit) {
     Row(
       verticalAlignment = Alignment.CenterVertically,
       modifier = Modifier
-        .background((blueList))
+        .background((blue))
         .fillMaxWidth()
         .height(56.dp)
         //.toggleable(
@@ -133,7 +136,7 @@ fun CardRoutineSelect2(routine: String, image: @Composable () -> Unit) {
       Checkbox(
         checked = checkedState.value,
         onCheckedChange = { checkedState.value = it },
-        colors = CheckboxDefaults.colors(pinkWriting)
+        colors = CheckboxDefaults.colors(blueDisabled)
       )
     }
   }

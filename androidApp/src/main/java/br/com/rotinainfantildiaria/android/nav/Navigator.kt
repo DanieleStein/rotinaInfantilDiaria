@@ -14,7 +14,7 @@ import br.com.rotinainfantildiaria.android.selectRoutines.SelectRoutinesGirlScre
 
 
 enum class Route {
-  LOGIN, SELECT, LIST, GENDER, LISTB, SELECTB, GENDERB
+  LOGIN, SELECT, LIST, GENDER, LISTB, SELECTB
 }
 
 
@@ -27,12 +27,16 @@ fun Navigator(
     navController = navHostController,
     startDestination = initial.name
   ) {
+
     composable(Route.LOGIN.name) {
       LoginScreen { navHostController.navigate(Route.GENDER.name) }
     }
 
     composable(Route.GENDER.name) {
-      SelectGenderScreen { navHostController.navigate(Route.LIST.name) }
+      SelectGenderScreen(
+        selectedGenderBoyNavigate = { navHostController.navigate(Route.LISTB.name) },
+        selectedGenderGirlNavigate = { navHostController.navigate(Route.LIST.name) }
+      )
     }
 
     composable(Route.LIST.name) {
@@ -43,20 +47,13 @@ fun Navigator(
       SelectRoutinesGirlScreen { navHostController.navigate(Route.LIST.name) }
     }
 
-    composable(Route.GENDERB.name) {
-      SelectGenderScreen { navHostController.navigate(Route.LISTB.name)}
-    }
-
     composable(Route.LISTB.name) {
       ListRoutinesBoyScreen { navHostController.navigate(Route.SELECTB.name) }
     }
 
-
-
-
-
-
+    composable(Route.SELECTB.name) {
+      SelectRoutinesBoyScreen { navHostController.navigate(Route.LISTB.name)}
+    }
 
   }
-
 }
