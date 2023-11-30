@@ -15,11 +15,15 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import br.com.rotinainfantildiaria.android.MyApplicationTheme
+import br.com.rotinainfantildiaria.android.nav.Route
 import br.com.rotinainfantildiaria.android.ui.theme.blueSelected
 import br.com.rotinainfantildiaria.android.ui.theme.pinkSelected
 
 @Composable
-fun SelectGenderScreen(selectedGenderNavigate: () -> Unit) {
+fun SelectGenderScreen(
+  selectedGenderBoyNavigate: () -> Unit,
+  selectedGenderGirlNavigate: () -> Unit
+) {
   MyApplicationTheme {
     Scaffold {
       Column(
@@ -34,7 +38,7 @@ fun SelectGenderScreen(selectedGenderNavigate: () -> Unit) {
           verticalAlignment = Alignment.CenterVertically
         ) {
           TextButton(
-            onClick = selectedGenderNavigate,
+            onClick = selectedGenderGirlNavigate,
             colors = ButtonDefaults.buttonColors(
               backgroundColor = Color.Transparent,
               disabledBackgroundColor = Color.White
@@ -54,7 +58,7 @@ fun SelectGenderScreen(selectedGenderNavigate: () -> Unit) {
           verticalAlignment = Alignment.CenterVertically
         ) {
           TextButton(
-            onClick = selectedGenderNavigate,
+            onClick = selectedGenderBoyNavigate,
             colors = ButtonDefaults.buttonColors(
               backgroundColor = Color.Transparent,
               disabledBackgroundColor = Color.White
@@ -78,5 +82,5 @@ fun SelectGenderScreen(selectedGenderNavigate: () -> Unit) {
 @Preview
 @Composable
 fun SelectGenderScreenPreview() {
-  SelectGenderScreen {}
+  SelectGenderScreen (    {}, {})
 }
