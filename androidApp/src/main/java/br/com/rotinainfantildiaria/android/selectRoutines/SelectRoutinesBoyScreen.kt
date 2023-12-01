@@ -8,6 +8,8 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.*
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -25,11 +27,14 @@ import br.com.rotinainfantildiaria.android.R
 import br.com.rotinainfantildiaria.android.components.BottomAppBarBoy
 import br.com.rotinainfantildiaria.android.components.CardRoutineSelect2
 import br.com.rotinainfantildiaria.android.components.TopBarBoy
+import br.com.rotinainfantildiaria.android.ui.theme.violet2
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SelectRoutinesBoyScreen(function: () -> Unit) {
   MyApplicationTheme {
     Scaffold(
+      containerColor = Color(violet2),
       topBar = { TopBarBoy(title = "Routine") },
       bottomBar = { BottomAppBarBoy(title = "Adicionar", onClick = function) }
     ) {
