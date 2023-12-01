@@ -5,6 +5,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Card
 import androidx.compose.material.Checkbox
+import androidx.compose.material.CheckboxColors
 import androidx.compose.material.CheckboxDefaults
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -12,6 +13,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
@@ -58,13 +60,18 @@ fun CardRoutineSelect(routine: String, image: @Composable () -> Unit) {
         fontSize = 20.sp,
         fontFamily = FontFamily.Cursive,
         fontWeight = FontWeight.Bold,
-        textAlign = TextAlign.Center
+        textAlign = TextAlign.Center,
+        color = Color.White
       )
       Spacer(modifier = Modifier.weight(1f))
       Checkbox(
         checked = checkedState.value,
         onCheckedChange = { checkedState.value = it },
-        colors = CheckboxDefaults.colors(pinkWriting)
+        colors = CheckboxDefaults.colors(
+          checkedColor = pinkWriting,
+          uncheckedColor = Color.White,
+          checkmarkColor = Color.White
+        )
       )
     }
   }
@@ -130,13 +137,18 @@ fun CardRoutineSelect2(routine: String, image: @Composable () -> Unit) {
         fontSize = 20.sp,
         fontFamily = FontFamily.Cursive,
         fontWeight = FontWeight.Bold,
-        textAlign = TextAlign.Center
+        textAlign = TextAlign.Center,
+        color = Color.White
       )
       Spacer(modifier = Modifier.weight(1f))
       Checkbox(
         checked = checkedState.value,
         onCheckedChange = { checkedState.value = it },
-        colors = CheckboxDefaults.colors(blueDisabled)
+        colors = CheckboxDefaults.colors(
+          checkedColor = blueDisabled,
+          uncheckedColor = Color.White,
+          checkmarkColor = Color.White
+        )
       )
     }
   }
