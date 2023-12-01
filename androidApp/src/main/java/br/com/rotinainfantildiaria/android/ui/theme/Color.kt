@@ -16,6 +16,7 @@ val blueList = Color(0xFFB0E0F5)
 val violet = Color(0xFF845EC2)
 val pink = Color(0x80D65DB1)
 val blue = Color(0x802C73D2)
+val violet2 = Color(0x33845EC2)
 
 
 
