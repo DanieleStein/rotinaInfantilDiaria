@@ -10,7 +10,6 @@ import androidx.compose.ui.unit.dp
 import br.com.rotinainfantildiaria.android.MyApplicationTheme
 import br.com.rotinainfantildiaria.android.components.FloatingButtonBoy
 import br.com.rotinainfantildiaria.android.components.TopBarBoy
-import br.com.rotinainfantildiaria.android.nav.Route
 
 @Composable
 fun ListRoutinesBoyScreen(function: () -> Unit) {
@@ -29,9 +28,7 @@ fun ListRoutinesBoyScreen(function: () -> Unit) {
    }
  }
 }
-fun teste() {
 
-}
 
 @Preview
 @Composable
