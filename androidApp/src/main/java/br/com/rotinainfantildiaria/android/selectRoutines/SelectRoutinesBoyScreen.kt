@@ -27,7 +27,6 @@ import br.com.rotinainfantildiaria.android.R
 import br.com.rotinainfantildiaria.android.components.BottomAppBarBoy
 import br.com.rotinainfantildiaria.android.components.CardRoutineSelect2
 import br.com.rotinainfantildiaria.android.components.TopBarBoy
-import br.com.rotinainfantildiaria.android.ui.theme.violet2
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
