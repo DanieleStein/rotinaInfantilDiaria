@@ -5,7 +5,6 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Card
 import androidx.compose.material.Checkbox
-import androidx.compose.material.CheckboxColors
 import androidx.compose.material.CheckboxDefaults
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -25,7 +24,6 @@ import androidx.compose.ui.unit.sp
 import br.com.rotinainfantildiaria.android.R
 import br.com.rotinainfantildiaria.android.ui.theme.blue
 import br.com.rotinainfantildiaria.android.ui.theme.blueDisabled
-import br.com.rotinainfantildiaria.android.ui.theme.blueList
 import br.com.rotinainfantildiaria.android.ui.theme.pink
 import br.com.rotinainfantildiaria.android.ui.theme.pinkBackground
 import br.com.rotinainfantildiaria.android.ui.theme.pinkWriting

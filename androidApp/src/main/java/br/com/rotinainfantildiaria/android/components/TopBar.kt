@@ -18,10 +18,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.rotinainfantildiaria.android.R
-import br.com.rotinainfantildiaria.android.ui.theme.green
-import br.com.rotinainfantildiaria.android.ui.theme.pinkWriting
 import br.com.rotinainfantildiaria.android.ui.theme.violet
-import br.com.rotinainfantildiaria.android.ui.theme.yellow
 
 @Composable
 fun TopBarGirl(title: String) {

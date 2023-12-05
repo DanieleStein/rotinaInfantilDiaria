@@ -27,14 +27,20 @@ import br.com.rotinainfantildiaria.android.R
 import br.com.rotinainfantildiaria.android.components.BottomAppBarBoy
 import br.com.rotinainfantildiaria.android.components.CardRoutineSelect2
 import br.com.rotinainfantildiaria.android.components.TopBarBoy
+import br.com.rotinainfantildiaria.android.ui.theme.violet2
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SelectRoutinesBoyScreen(function: () -> Unit) {
   MyApplicationTheme {
+    Surface(
+      contentColor = Color(violet2)
+    ) {
+
+    }
     Scaffold(
       topBar = { TopBarBoy(title = "Routine") },
-      bottomBar = { BottomAppBarBoy(title = "Adicionar", onClick = function) }
+      bottomBar = { BottomAppBarBoy(title = "Adicionar", onClick = function) },
     ) {
 
       LazyColumn(
@@ -347,6 +353,7 @@ fun SelectRoutinesBoyScreen(function: () -> Unit) {
     }
   }
 }
+
 
 @Preview
 @Composable
