@@ -49,18 +49,18 @@ fun SelectRoutinesGirlScreen(onListNavigate: () -> Unit) {
         }
 
         item {
-            CardRoutineSelect(
-              routine = "Ir ao banheiro",
-              image = {
-                Image(
-                  modifier = Modifier.width(50.dp),
-                  painter = painterResource(id = R.drawable.banheiro3),
-                  contentDescription = "banheiro",
-                  alignment = Alignment.Center,
-                  contentScale = ContentScale.FillWidth
-                )
-              }
-            )
+          CardRoutineSelect(
+            routine = "Ir ao banheiro",
+            image = {
+              Image(
+                modifier = Modifier.width(50.dp),
+                painter = painterResource(id = R.drawable.banheiro3),
+                contentDescription = "banheiro",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.FillWidth
+              )
+            }
+          )
           Spacer(modifier = Modifier.height(8.dp))
         }
 
