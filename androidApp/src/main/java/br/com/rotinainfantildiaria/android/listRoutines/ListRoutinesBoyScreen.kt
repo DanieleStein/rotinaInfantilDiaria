@@ -13,20 +13,20 @@ import br.com.rotinainfantildiaria.android.components.TopBarBoy
 
 @Composable
 fun ListRoutinesBoyScreen(function: () -> Unit) {
- MyApplicationTheme {
-   Scaffold(
-     floatingActionButton = { FloatingButtonBoy (onClick = function)},
-     topBar = { TopBarBoy(title = "Routine")}
-   ) {
-     LazyColumn(
-       modifier = Modifier
-         .padding(16.dp)
-         .padding(it)
-     ) {
+  MyApplicationTheme {
+    Scaffold(
+      floatingActionButton = { FloatingButtonBoy(onClick = function) },
+      topBar = { TopBarBoy(title = "Routine") }
+    ) {
+      LazyColumn(
+        modifier = Modifier
+          .padding(16.dp)
+          .padding(it)
+      ) {
 
-     }
-   }
- }
+      }
+    }
+  }
 }
 
 

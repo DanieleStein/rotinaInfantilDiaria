@@ -15,7 +15,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import br.com.rotinainfantildiaria.android.MyApplicationTheme
-import br.com.rotinainfantildiaria.android.nav.Route
 import br.com.rotinainfantildiaria.android.ui.theme.blueSelected
 import br.com.rotinainfantildiaria.android.ui.theme.pinkSelected
 
@@ -78,9 +77,8 @@ fun SelectGenderScreen(
   }
 }
 
-
 @Preview
 @Composable
 fun SelectGenderScreenPreview() {
-  SelectGenderScreen (    {}, {})
+  SelectGenderScreen({}, {})
 }
