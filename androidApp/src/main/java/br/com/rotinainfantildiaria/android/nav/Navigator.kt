@@ -40,7 +40,7 @@ fun Navigator(
     }
 
     composable(Route.LIST.name) {
-      ListRoutinesGirlScreen { navHostController.navigate(Route.SELECT.name)}
+      ListRoutinesGirlScreen { navHostController.navigate(Route.SELECT.name) }
     }
 
     composable(Route.SELECT.name) {
@@ -52,7 +52,7 @@ fun Navigator(
     }
 
     composable(Route.SELECTB.name) {
-      SelectRoutinesBoyScreen { navHostController.navigate(Route.LISTB.name)}
+      SelectRoutinesBoyScreen { navHostController.navigate(Route.LISTB.name) }
     }
 
   }
