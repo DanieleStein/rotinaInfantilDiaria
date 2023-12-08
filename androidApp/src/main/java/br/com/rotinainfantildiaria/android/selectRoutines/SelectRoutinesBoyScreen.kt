@@ -33,11 +33,6 @@ import br.com.rotinainfantildiaria.android.ui.theme.violet2
 @Composable
 fun SelectRoutinesBoyScreen(function: () -> Unit) {
   MyApplicationTheme {
-    Surface(
-      contentColor = Color(violet2)
-    ) {
-
-    }
     Scaffold(
       topBar = { TopBarBoy(title = "Routine") },
       bottomBar = { BottomAppBarBoy(title = "Adicionar", onClick = function) },
