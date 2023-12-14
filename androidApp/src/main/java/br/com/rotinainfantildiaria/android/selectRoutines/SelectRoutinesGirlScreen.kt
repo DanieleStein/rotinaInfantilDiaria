@@ -42,7 +42,7 @@ fun SelectRoutinesGirlScreen(onListNavigate: () -> Unit) {
             fontWeight = FontWeight.Bold,
             fontFamily = FontFamily.Cursive,
             fontSize = 35.sp,
-            color = Color.Black,
+            color = Color(0x80D65DB1),
             textAlign = TextAlign.Center
           )
           Spacer(modifier = Modifier.height(16.dp))
