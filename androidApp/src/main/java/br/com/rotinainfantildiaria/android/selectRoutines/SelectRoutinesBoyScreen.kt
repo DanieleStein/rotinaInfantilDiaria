@@ -1,7 +1,6 @@
 package br.com.rotinainfantildiaria.android.selectRoutines
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -16,7 +15,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.modifier.ModifierLocalReadScope
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
@@ -24,14 +22,12 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.lifecycle.viewmodel.viewModelFactory
 import br.com.rotinainfantildiaria.android.MyApplicationTheme
 import br.com.rotinainfantildiaria.android.R
 import br.com.rotinainfantildiaria.android.components.BottomAppBarBoy
 import br.com.rotinainfantildiaria.android.components.CardRoutineSelect2
 import br.com.rotinainfantildiaria.android.components.TopBarBoy
-import br.com.rotinainfantildiaria.android.ui.theme.violet
-import br.com.rotinainfantildiaria.android.ui.theme.violet2
+import br.com.rotinainfantildiaria.android.ui.theme.blueSelected
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -39,8 +35,7 @@ fun SelectRoutinesBoyScreen(function: () -> Unit) {
   MyApplicationTheme{
     Scaffold(
       topBar = { TopBarBoy(title = "Routine") },
-      bottomBar = { BottomAppBarBoy(title = "Adicionar", onClick = function) },
-      containerColor = Color(co)
+      bottomBar = { BottomAppBarBoy(title = "Adicionar", onClick = function) }
     ) {
 
       LazyColumn(
@@ -55,7 +50,7 @@ fun SelectRoutinesBoyScreen(function: () -> Unit) {
             fontWeight = FontWeight.Bold,
             fontFamily = FontFamily.Cursive,
             fontSize = 35.sp,
-            color = Color.Black,
+            color = Color(0x802C73D2),
             textAlign = TextAlign.Center
           )
           Spacer(modifier = Modifier.height(16.dp))
