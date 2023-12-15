@@ -75,36 +75,6 @@ fun CardRoutineSelect(routine: String, image: @Composable () -> Unit) {
   }
 }
 
-
-@Composable
-fun CardRoutineList(routine: String, image: @Composable () -> Unit) {
-  Card {
-    Row(
-      verticalAlignment = Alignment.CenterVertically,
-      modifier = Modifier
-        .background((pinkBackground))
-        .fillMaxWidth()
-        .height(56.dp)
-        .padding(horizontal = 3.dp, vertical = 3.dp)
-        .padding(end = 5.dp)
-    ) {
-      Column(
-        verticalArrangement = Arrangement.Center,
-      ) {
-        image()
-      }
-      Spacer(modifier = Modifier.width(15.dp))
-      Text(
-        text = routine,
-        fontSize = 20.sp,
-        fontFamily = FontFamily.Cursive,
-        fontWeight = FontWeight.Bold,
-        textAlign = TextAlign.Center
-      )
-    }
-  }
-}
-
 @Composable
 fun CardRoutineSelect2(routine: String, image: @Composable () -> Unit) {
   Card {
@@ -153,6 +123,69 @@ fun CardRoutineSelect2(routine: String, image: @Composable () -> Unit) {
 }
 
 
+@Composable
+fun CardRoutineListGirl(routine: String, image: @Composable () -> Unit) {
+  Card {
+    Row(
+      verticalAlignment = Alignment.CenterVertically,
+      modifier = Modifier
+        .background((pink))
+        .fillMaxWidth()
+        .height(56.dp)
+        .padding(horizontal = 3.dp, vertical = 3.dp)
+        .padding(end = 5.dp)
+    ) {
+      Column(
+        verticalArrangement = Arrangement.Center,
+      ) {
+        image()
+      }
+      Spacer(modifier = Modifier.width(15.dp))
+      Text(
+        text = routine,
+        fontSize = 20.sp,
+        fontFamily = FontFamily.Cursive,
+        fontWeight = FontWeight.Bold,
+        textAlign = TextAlign.Center,
+        color = Color.White
+      )
+    }
+  }
+}
+
+@Composable
+fun CardRoutineListBoy(routine: String, image: @Composable () -> Unit) {
+  Card {
+    Row(
+      verticalAlignment = Alignment.CenterVertically,
+      modifier = Modifier
+        .background((blue))
+        .fillMaxWidth()
+        .height(56.dp)
+        .padding(horizontal = 3.dp, vertical = 3.dp)
+        .padding(end = 5.dp)
+    ) {
+      Column(
+        verticalArrangement = Arrangement.Center,
+      ) {
+        image()
+      }
+      Spacer(modifier = Modifier.width(15.dp))
+      Text(
+        text = routine,
+        fontSize = 20.sp,
+        fontFamily = FontFamily.Cursive,
+        fontWeight = FontWeight.Bold,
+        textAlign = TextAlign.Center,
+        color = Color.White
+      )
+    }
+  }
+}
+
+
+
+
 @Preview
 @Composable
 fun CardRoutineSelectPreview() {
@@ -172,8 +205,8 @@ fun CardRoutineSelectPreview() {
 
 @Preview
 @Composable
-fun CardRoutineListPreview() {
-  CardRoutineList(
+fun CardRoutineSelect2Preview() {
+  CardRoutineSelect2(
     routine = "Ir ao banheiro",
     image = {
       Image(
@@ -189,8 +222,25 @@ fun CardRoutineListPreview() {
 
 @Preview
 @Composable
-fun CardRoutineSelect2Preview() {
-  CardRoutineSelect2(
+fun CardRoutineListGirlPreview() {
+  CardRoutineListGirl(
+    routine = "Ir ao banheiro",
+    image = {
+      Image(
+        modifier = Modifier.width(50.dp),
+        painter = painterResource(id = R.drawable.banheiro3),
+        contentDescription = "banheiro",
+        alignment = Alignment.Center,
+        contentScale = ContentScale.FillWidth
+      )
+    }
+  )
+}
+
+@Preview
+@Composable
+fun CardRoutineListBoyPreview() {
+  CardRoutineListBoy(
     routine = "Ir ao banheiro",
     image = {
       Image(
