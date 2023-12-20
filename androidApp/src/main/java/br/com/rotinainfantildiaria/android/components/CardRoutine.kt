@@ -25,7 +25,6 @@ import br.com.rotinainfantildiaria.android.R
 import br.com.rotinainfantildiaria.android.ui.theme.blue
 import br.com.rotinainfantildiaria.android.ui.theme.blueDisabled
 import br.com.rotinainfantildiaria.android.ui.theme.pink
-import br.com.rotinainfantildiaria.android.ui.theme.pinkBackground
 import br.com.rotinainfantildiaria.android.ui.theme.pinkWriting
 
 @Composable
