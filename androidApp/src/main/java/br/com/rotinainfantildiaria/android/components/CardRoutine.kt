@@ -13,8 +13,10 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -148,6 +150,11 @@ fun CardRoutineListGirl(routine: String, image: @Composable () -> Unit) {
         textAlign = TextAlign.Center,
         color = Color.White
       )
+      Spacer(modifier = Modifier.weight(1f))
+      Image(
+        imageVector = ImageVector.vectorResource(id = R.drawable.baseline_delete_24),
+        contentDescription = "icone deletar tarefa"
+      )
     }
   }
 }
@@ -177,6 +184,11 @@ fun CardRoutineListBoy(routine: String, image: @Composable () -> Unit) {
         fontWeight = FontWeight.Bold,
         textAlign = TextAlign.Center,
         color = Color.White
+      )
+      Spacer(modifier = Modifier.weight(1f))
+      Image(
+        imageVector = ImageVector.vectorResource(id = R.drawable.baseline_delete_24),
+        contentDescription = "icone deletar tarefa"
       )
     }
   }
