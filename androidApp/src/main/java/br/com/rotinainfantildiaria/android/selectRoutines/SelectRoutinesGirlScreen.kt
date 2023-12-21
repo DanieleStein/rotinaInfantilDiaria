@@ -27,7 +27,8 @@ fun SelectRoutinesGirlScreen(onListNavigate: () -> Unit) {
   MyApplicationTheme {
     Scaffold(
       topBar = { TopBarGirl(title = "Routine") },
-      bottomBar = { BottomAppBarGirl(title = "Adicionar", onClick = onListNavigate) }
+      bottomBar = { BottomAppBarGirl(title = "Adicionar", onClick = onListNavigate) },
+      //backgroundColor = pink
     ) {
 
       LazyColumn(
